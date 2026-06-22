@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/base}">
+<head>
+    <title>Participanți</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Participanți</h2>
+        <a href="/participants/new" class="btn btn-primary">
+            <i class="bi bi-plus"></i> Adaugă participant
+        </a>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>
+                <a th:href="@{/participants(sortBy='lastName', direction=${direction == 'asc' ? 'desc' : 'asc'})}">
+                    Nume
+                </a>
+            </th>
+            <th>
+                <a th:href="@{/participants(sortBy='firstName', direction=${direction == 'asc' ? 'desc' : 'asc'})}">
+                    Prenume
+                </a>
+            </th>
+            <th>Email</th>
+            <th>Telefon</th>
+            <th>Acțiuni</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="participant : ${participants}">
+            <td th:text="${participant.lastName}"></td>
+            <td th:text="${participant.firstName}"></td>
+            <td th:text="${participant.email}"></td>
+            <td th:text="${participant.phone}"></td>
+            <td>
+                <a th:href="@{/participants/{id}(id=${participant.id})}" class="btn btn-sm btn-info">
+                    <i class="bi bi-eye"></i>
+                </a>
+                <a th:href="@{/participants/{id}/edit(id=${participant.id})}" class="btn btn-sm btn-warning">
+                    <i class="bi bi-pencil"></i>
+                </a>
+                <form th:action="@{/participants/{id}/delete(id=${participant.id})}" method="post" class="d-inline">
+                    <button type="submit" class="btn btn-sm btn-danger"
+                            onclick="return confirm('Ești sigur?')">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <nav th:if="${participants.totalPages > 1}">
+        <ul class="pagination">
+            <li class="page-item" th:classappend="${participants.first} ? 'disabled'">
+                <a class="page-link" th:href="@{/participants(page=${participants.number - 1}, sortBy=${sortBy}, direction=${direction})}">Anterior</a>
+            </li>
+            <li class="page-item" th:each="i : ${#numbers.sequence(0, participants.totalPages - 1)}"
+                th:classappend="${i == participants.number} ? 'active'">
+                <a class="page-link" th:href="@{/participants(page=${i}, sortBy=${sortBy}, direction=${direction})}" th:text="${i + 1}"></a>
+            </li>
+            <li class="page-item" th:classappend="${participants.last} ? 'disabled'">
+                <a class="page-link" th:href="@{/participants(page=${participants.number + 1}, sortBy=${sortBy}, direction=${direction})}">Următor</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: eventmanager
+  profiles:
+    active: dev
+
+server:
+  port: 8080

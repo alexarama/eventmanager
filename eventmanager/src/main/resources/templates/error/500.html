@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/base}">
+<head>
+    <title>500 - Eroare server</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <div class="text-center mt-5">
+        <h1 class="display-1 text-danger">500</h1>
+        <h2>Eroare internă de server</h2>
+        <p class="text-muted" th:text="${error}">A apărut o eroare neașteptată.</p>
+        <a href="/events" class="btn btn-primary">Acasă</a>
+    </div>
+</div>
+</body>
+</html>

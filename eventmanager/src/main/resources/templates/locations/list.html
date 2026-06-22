@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/base}">
+<head>
+    <title>Locații</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Locații</h2>
+        <a href="/locations/new" class="btn btn-primary">
+            <i class="bi bi-plus"></i> Adaugă locație
+        </a>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Nume</th>
+            <th>Adresă</th>
+            <th>Oraș</th>
+            <th>Țară</th>
+            <th>Capacitate</th>
+            <th>Acțiuni</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="location : ${locations}">
+            <td th:text="${location.name}"></td>
+            <td th:text="${location.address}"></td>
+            <td th:text="${location.city}"></td>
+            <td th:text="${location.country}"></td>
+            <td th:text="${location.capacity}"></td>
+            <td>
+                <a th:href="@{/locations/{id}/edit(id=${location.id})}" class="btn btn-sm btn-warning">
+                    <i class="bi bi-pencil"></i>
+                </a>
+                <form th:action="@{/locations/{id}/delete(id=${location.id})}" method="post" class="d-inline">
+                    <button type="submit" class="btn btn-sm btn-danger"
+                            onclick="return confirm('Ești sigur?')">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
