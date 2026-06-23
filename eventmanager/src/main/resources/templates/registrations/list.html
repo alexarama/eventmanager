@@ -17,8 +17,16 @@
         <tr>
             <th>Participant</th>
             <th>Eveniment</th>
-            <th>Data înregistrării</th>
-            <th>Status</th>
+            <th>
+                <a th:href="@{/registrations/event/{id}(id=${eventId}, sortBy='registrationDate', direction=${direction == 'asc' ? 'desc' : 'asc'})}">
+                    Data înregistrării
+                </a>
+            </th>
+            <th>
+                <a th:href="@{/registrations/event/{id}(id=${eventId}, sortBy='status', direction=${direction == 'asc' ? 'desc' : 'asc'})}">
+                    Status
+                </a>
+            </th>
             <th>Acțiuni</th>
         </tr>
         </thead>
@@ -43,14 +51,14 @@
     <nav th:if="${registrations.totalPages > 1}">
         <ul class="pagination">
             <li class="page-item" th:classappend="${registrations.first} ? 'disabled'">
-                <a class="page-link" th:href="@{/registrations/event/{id}(id=${eventId}, page=${registrations.number - 1})}">Anterior</a>
+                <a class="page-link" th:href="@{/registrations/event/{id}(id=${eventId}, page=${registrations.number - 1}, sortBy=${sortBy}, direction=${direction})}">Anterior</a>
             </li>
             <li class="page-item" th:each="i : ${#numbers.sequence(0, registrations.totalPages - 1)}"
                 th:classappend="${i == registrations.number} ? 'active'">
-                <a class="page-link" th:href="@{/registrations/event/{id}(id=${eventId}, page=${i})}" th:text="${i + 1}"></a>
+                <a class="page-link" th:href="@{/registrations/event/{id}(id=${eventId}, page=${i}, sortBy=${sortBy}, direction=${direction})}" th:text="${i + 1}"></a>
             </li>
             <li class="page-item" th:classappend="${registrations.last} ? 'disabled'">
-                <a class="page-link" th:href="@{/registrations/event/{id}(id=${eventId}, page=${registrations.number + 1})}">Următor</a>
+                <a class="page-link" th:href="@{/registrations/event/{id}(id=${eventId}, page=${registrations.number + 1}, sortBy=${sortBy}, direction=${direction})}">Următor</a>
             </li>
         </ul>
     </nav>

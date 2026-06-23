@@ -4,3 +4,18 @@
 2026-06-24 00:52:39 [main] ERROR c.e.e.service.EventService - Event not found with id: 99
 2026-06-24 00:52:39 [main] ERROR c.e.e.service.EventService - Event not found with id: 99
 2026-06-24 00:52:39 [main] ERROR c.e.e.service.EventService - Invalid event dates: startDate=2026-06-25T00:52:39.287201400, endDate=2026-06-23T00:52:39.287201400
+2026-06-24 01:10:20 [main] ERROR c.e.e.service.EventService - Event not found with id: 99
+2026-06-24 01:10:20 [main] ERROR c.e.e.service.EventService - Event not found with id: 99
+2026-06-24 01:10:20 [main] ERROR c.e.e.service.EventService - Invalid event dates: startDate=2026-06-25T01:10:20.405207800, endDate=2026-06-23T01:10:20.405207800
+2026-06-24 01:11:29 [main] ERROR c.e.e.service.EventService - Event not found with id: 99
+2026-06-24 01:11:29 [main] ERROR c.e.e.service.EventService - Event not found with id: 99
+2026-06-24 01:11:29 [main] ERROR c.e.e.service.EventService - Invalid event dates: startDate=2026-06-25T01:11:29.709023800, endDate=2026-06-23T01:11:29.709023800
+2026-06-24 01:12:01 [main] ERROR c.e.e.service.EventService - Event not found with id: 99
+2026-06-24 01:12:01 [main] ERROR c.e.e.service.EventService - Event not found with id: 99
+2026-06-24 01:12:01 [main] ERROR c.e.e.service.EventService - Invalid event dates: startDate=2026-06-25T01:12:01.511243500, endDate=2026-06-23T01:12:01.511243500
+2026-06-24 01:17:33 [main] ERROR c.e.e.service.EventService - Event not found with id: 99
+2026-06-24 01:17:33 [main] ERROR c.e.e.service.EventService - Event not found with id: 99
+2026-06-24 01:17:33 [main] ERROR c.e.e.service.EventService - Invalid event dates: startDate=2026-06-25T01:17:33.913836600, endDate=2026-06-23T01:17:33.913836600
+2026-06-24 01:17:49 [main] ERROR c.e.e.service.EventService - Event not found with id: 99
+2026-06-24 01:17:49 [main] ERROR c.e.e.service.EventService - Event not found with id: 99
+2026-06-24 01:17:49 [main] ERROR c.e.e.service.EventService - Invalid event dates: startDate=2026-06-25T01:17:49.013907, endDate=2026-06-23T01:17:49.013907

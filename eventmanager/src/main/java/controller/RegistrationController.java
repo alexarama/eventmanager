@@ -18,18 +18,28 @@ public class RegistrationController {
     @GetMapping("/event/{eventId}")
     public String findByEvent(@PathVariable Long eventId, Model model,
                               @RequestParam(defaultValue = "0") int page,
-                              @RequestParam(defaultValue = "10") int size) {
-        model.addAttribute("registrations", registrationService.findByEventId(eventId, PageRequest.of(page, size, Sort.by("registrationDate").descending())));
+                              @RequestParam(defaultValue = "10") int size,
+                              @RequestParam(defaultValue = "registrationDate") String sortBy,
+                              @RequestParam(defaultValue = "desc") String direction) {
+        Sort sort = direction.equals("desc") ? Sort.by(sortBy).descending() : Sort.by(sortBy).ascending();
+        model.addAttribute("registrations", registrationService.findByEventId(eventId, PageRequest.of(page, size, sort)));
         model.addAttribute("eventId", eventId);
+        model.addAttribute("sortBy", sortBy);
+        model.addAttribute("direction", direction);
         return "registrations/list";
     }
 
     @GetMapping("/participant/{participantId}")
     public String findByParticipant(@PathVariable Long participantId, Model model,
                                     @RequestParam(defaultValue = "0") int page,
-                                    @RequestParam(defaultValue = "10") int size) {
-        model.addAttribute("registrations", registrationService.findByParticipantId(participantId, PageRequest.of(page, size, Sort.by("registrationDate").descending())));
+                                    @RequestParam(defaultValue = "10") int size,
+                                    @RequestParam(defaultValue = "registrationDate") String sortBy,
+                                    @RequestParam(defaultValue = "desc") String direction) {
+        Sort sort = direction.equals("desc") ? Sort.by(sortBy).descending() : Sort.by(sortBy).ascending();
+        model.addAttribute("registrations", registrationService.findByParticipantId(participantId, PageRequest.of(page, size, sort)));
         model.addAttribute("participantId", participantId);
+        model.addAttribute("sortBy", sortBy);
+        model.addAttribute("direction", direction);
         return "registrations/list";
     }
 
