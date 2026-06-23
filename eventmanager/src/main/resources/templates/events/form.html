@@ -87,6 +87,43 @@
         <button type="submit" class="btn btn-primary">Salvează</button>
         <a href="/events" class="btn btn-secondary">Anulează</a>
     </form>
+
+    <script>
+        (function() {
+            'use strict';
+            const form = document.querySelector('form');
+            form.addEventListener('submit', function(event) {
+                let valid = true;
+
+                const name = document.getElementById('name');
+                if (!name.value.trim()) {
+                    name.classList.add('is-invalid');
+                    valid = false;
+                } else {
+                    name.classList.remove('is-invalid');
+                }
+
+                const startDate = document.getElementById('startDate');
+                const endDate = document.getElementById('endDate');
+                if (startDate.value && endDate.value && endDate.value <= startDate.value) {
+                    endDate.classList.add('is-invalid');
+                    endDate.nextElementSibling.textContent = 'Data de final trebuie să fie după data de start';
+                    valid = false;
+                }
+
+                const spots = document.getElementById('availableSpots');
+                if (!spots.value || spots.value < 0) {
+                    spots.classList.add('is-invalid');
+                    valid = false;
+                }
+
+                if (!valid) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+            });
+        })();
+    </script>
 </div>
 </body>
 </html>
