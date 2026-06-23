@@ -1,3 +1,6 @@
 2026-06-24 00:44:20 [main] ERROR c.e.e.service.EventService - Event not found with id: 99
 2026-06-24 00:44:20 [main] ERROR c.e.e.service.EventService - Event not found with id: 99
 2026-06-24 00:44:20 [main] ERROR c.e.e.service.EventService - Invalid event dates: startDate=2026-06-25T00:44:20.995911800, endDate=2026-06-23T00:44:20.996964
+2026-06-24 00:52:39 [main] ERROR c.e.e.service.EventService - Event not found with id: 99
+2026-06-24 00:52:39 [main] ERROR c.e.e.service.EventService - Event not found with id: 99
+2026-06-24 00:52:39 [main] ERROR c.e.e.service.EventService - Invalid event dates: startDate=2026-06-25T00:52:39.287201400, endDate=2026-06-23T00:52:39.287201400
