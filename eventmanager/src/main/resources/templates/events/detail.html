@@ -36,10 +36,41 @@
         </div>
     </div>
 
-    <h4>Participanți înregistrați</h4>
+    <h4>Înregistrare la eveniment</h4>
+    <form th:action="@{/registrations/event/{eventId}/participant/{participantId}(eventId=${event.id}, participantId=1)}"
+          method="post" class="mt-3 mb-3" id="registrationForm">
+        <div class="mb-3">
+            <label class="form-label">ID Participant *</label>
+            <input type="number" class="form-control" id="participantId" name="participantId"
+                   min="1" required placeholder="Introdu ID-ul participantului"/>
+            <div class="invalid-feedback">ID-ul participantului este obligatoriu</div>
+        </div>
+        <button type="submit" class="btn btn-success">
+            <i class="bi bi-person-plus"></i> Înregistrează
+        </button>
+    </form>
+
     <a th:href="@{/registrations/event/{id}(id=${event.id})}" class="btn btn-info mb-3">
         <i class="bi bi-people"></i> Vezi înregistrări
     </a>
+
+    <script>
+        (function() {
+            'use strict';
+            const form = document.getElementById('registrationForm');
+            form.addEventListener('submit', function(event) {
+                const participantId = document.getElementById('participantId');
+                if (!participantId.value || participantId.value < 1) {
+                    participantId.classList.add('is-invalid');
+                    event.preventDefault();
+                    event.stopPropagation();
+                } else {
+                    const action = form.action.replace('/participant/1', '/participant/' + participantId.value);
+                    form.action = action;
+                }
+            });
+        })();
+    </script>
 </div>
 </body>
 </html>
