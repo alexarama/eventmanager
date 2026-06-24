@@ -8,8 +8,10 @@ import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import java.time.LocalDateTime;
 import java.util.List;
+import lombok.ToString;
 
 @Data
+@ToString(exclude = {"category", "location", "eventGroup", "participants", "registrations"})
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
