@@ -6,6 +6,7 @@ import com.example.eventmanager.service.EventGroupService;
 import com.example.eventmanager.service.EventService;
 import com.example.eventmanager.service.LocationService;
 import com.example.eventmanager.service.ParticipantService;
+import com.example.eventmanager.service.QRCodeService;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -29,6 +30,7 @@ public class EventController {
     private final CategoryService categoryService;
     private final EventGroupService eventGroupService;
     private final ParticipantService participantService;
+    private final QRCodeService qrCodeService;
 
     @GetMapping
     public String findAll(Model model,
@@ -51,8 +53,16 @@ public class EventController {
 
     @GetMapping("/{id}")
     public String findById(@PathVariable Long id, Model model) {
-        model.addAttribute("event", eventService.findById(id));
+        Event event = eventService.findById(id);
+        model.addAttribute("event", event);
         model.addAttribute("participants", participantService.findAll(PageRequest.of(0, 1000, Sort.by("lastName").ascending())).getContent());
+
+        if (event.getJoinToken() != null) {
+            String joinUrl = "http://localhost:8080/join/" + event.getJoinToken();
+            String qrCode = qrCodeService.generateQRCodeBase64(joinUrl, 200, 200);
+            model.addAttribute("qrCode", qrCode);
+        }
+
         return "events/detail";
     }
 

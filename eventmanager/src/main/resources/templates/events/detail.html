@@ -48,6 +48,12 @@
         </small>
     </div>
 
+    <div class="text-center mb-3" sec:authorize="hasRole('ADMIN')" th:if="${qrCode != null}">
+        <h5><i class="bi bi-qr-code"></i> QR Code înregistrare</h5>
+        <img th:src="'data:image/png;base64,' + ${qrCode}" alt="QR Code" class="img-fluid" style="max-width: 200px;"/>
+        <p class="text-muted small">Scanează pentru a te înregistra la eveniment</p>
+    </div>
+
     <div sec:authorize="hasRole('ADMIN')">
         <h4>Înregistrare la eveniment</h4>
         <form th:action="@{/registrations/event/{eventId}/participant/{participantId}(eventId=${event.id}, participantId=0)}"
