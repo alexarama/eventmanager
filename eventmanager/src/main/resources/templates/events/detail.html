@@ -68,9 +68,14 @@
             </button>
         </form>
 
-        <a th:href="@{/registrations/event/{id}(id=${event.id})}" class="btn btn-info mb-3">
-            <i class="bi bi-people"></i> Vezi înregistrări
-        </a>
+        <div class="d-flex gap-2 mb-3">
+            <a th:href="@{/registrations/event/{id}(id=${event.id})}" class="btn btn-info">
+                <i class="bi bi-people"></i> Vezi înregistrări
+            </a>
+            <a th:href="@{/events/{id}/export(id=${event.id})}" class="btn btn-success">
+                <i class="bi bi-download"></i> Export CSV
+            </a>
+        </div>
     </div>
 
     <script>

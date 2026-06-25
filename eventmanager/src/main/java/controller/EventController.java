@@ -6,6 +6,7 @@ import com.example.eventmanager.service.EventGroupService;
 import com.example.eventmanager.service.EventService;
 import com.example.eventmanager.service.LocationService;
 import com.example.eventmanager.service.ParticipantService;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
@@ -14,6 +15,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+
+import java.io.IOException;
+import java.io.PrintWriter;
 
 @Controller
 @RequestMapping("/events")
@@ -99,5 +103,28 @@ public class EventController {
     public String delete(@PathVariable Long id) {
         eventService.delete(id);
         return "redirect:/events";
+    }
+
+    @GetMapping("/{id}/export")
+    @org.springframework.security.access.annotation.Secured("ROLE_ADMIN")
+    public void exportParticipants(@PathVariable Long id, HttpServletResponse response) throws IOException {
+        Event event = eventService.findById(id);
+        response.setContentType("text/csv");
+        response.setHeader("Content-Disposition", "attachment; filename=\"participants-" + id + ".csv\"");
+
+        PrintWriter writer = response.getWriter();
+        writer.println("Nume,Prenume,Email,Telefon,Data inregistrarii,Status");
+
+        event.getRegistrations().forEach(reg -> {
+            writer.println(
+                    reg.getParticipant().getLastName() + "," +
+                            reg.getParticipant().getFirstName() + "," +
+                            reg.getParticipant().getEmail() + "," +
+                            (reg.getParticipant().getPhone() != null ? reg.getParticipant().getPhone() : "") + "," +
+                            reg.getRegistrationDate() + "," +
+                            reg.getStatus()
+            );
+        });
+        writer.flush();
     }
 }
