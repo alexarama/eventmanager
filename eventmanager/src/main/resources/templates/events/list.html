@@ -16,16 +16,32 @@
         </a>
     </div>
 
+    <form th:action="@{/events}" method="get" class="d-flex gap-2 mb-3">
+        <input type="text" class="form-control" name="search"
+               th:value="${search}" placeholder="Caută evenimente după nume sau descriere..."/>
+        <button type="submit" class="btn btn-outline-primary">
+            <i class="bi bi-search"></i> Caută
+        </button>
+        <a href="/events" class="btn btn-outline-secondary" th:if="${search != null && !search.isEmpty()}">
+            <i class="bi bi-x"></i> Resetează
+        </a>
+    </form>
+
+    <div th:if="${search != null && !search.isEmpty()}" class="alert alert-info mb-3">
+        Rezultate pentru: <strong th:text="${search}"></strong>
+        — <span th:text="${events.totalElements}"></span> evenimente găsite
+    </div>
+
     <table class="table table-striped">
         <thead>
         <tr>
             <th>
-                <a th:href="@{/events(sortBy='name', direction=${direction == 'asc' ? 'desc' : 'asc'})}">
+                <a th:href="@{/events(sortBy='name', direction=${direction == 'asc' ? 'desc' : 'asc'}, search=${search})}">
                     Nume
                 </a>
             </th>
             <th>
-                <a th:href="@{/events(sortBy='startDate', direction=${direction == 'asc' ? 'desc' : 'asc'})}">
+                <a th:href="@{/events(sortBy='startDate', direction=${direction == 'asc' ? 'desc' : 'asc'}, search=${search})}">
                     Data start
                 </a>
             </th>
@@ -70,14 +86,14 @@
     <nav th:if="${events.totalPages > 1}">
         <ul class="pagination">
             <li class="page-item" th:classappend="${events.first} ? 'disabled'">
-                <a class="page-link" th:href="@{/events(page=${events.number - 1}, sortBy=${sortBy}, direction=${direction})}">Anterior</a>
+                <a class="page-link" th:href="@{/events(page=${events.number - 1}, sortBy=${sortBy}, direction=${direction}, search=${search})}">Anterior</a>
             </li>
             <li class="page-item" th:each="i : ${#numbers.sequence(0, events.totalPages - 1)}"
                 th:classappend="${i == events.number} ? 'active'">
-                <a class="page-link" th:href="@{/events(page=${i}, sortBy=${sortBy}, direction=${direction})}" th:text="${i + 1}"></a>
+                <a class="page-link" th:href="@{/events(page=${i}, sortBy=${sortBy}, direction=${direction}, search=${search})}" th:text="${i + 1}"></a>
             </li>
             <li class="page-item" th:classappend="${events.last} ? 'disabled'">
-                <a class="page-link" th:href="@{/events(page=${events.number + 1}, sortBy=${sortBy}, direction=${direction})}">Următor</a>
+                <a class="page-link" th:href="@{/events(page=${events.number + 1}, sortBy=${sortBy}, direction=${direction}, search=${search})}">Următor</a>
             </li>
         </ul>
     </nav>

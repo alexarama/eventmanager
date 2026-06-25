@@ -46,6 +46,11 @@ public class EventService {
         return eventRepository.findByJoinToken(token);
     }
 
+    public Page<Event> search(String query, Pageable pageable) {
+        log.debug("Searching events with query: {}", query);
+        return eventRepository.findByNameContainingIgnoreCaseOrDescriptionContainingIgnoreCase(query, query, pageable);
+    }
+
     public Event save(Event event) {
         if (event.getEndDate().isBefore(event.getStartDate())) {
             log.error("Invalid event dates: startDate={}, endDate={}", event.getStartDate(), event.getEndDate());

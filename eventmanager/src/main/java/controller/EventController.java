@@ -31,11 +31,17 @@ public class EventController {
                           @RequestParam(defaultValue = "0") int page,
                           @RequestParam(defaultValue = "10") int size,
                           @RequestParam(defaultValue = "startDate") String sortBy,
-                          @RequestParam(defaultValue = "asc") String direction) {
+                          @RequestParam(defaultValue = "asc") String direction,
+                          @RequestParam(defaultValue = "") String search) {
         Sort sort = direction.equals("desc") ? Sort.by(sortBy).descending() : Sort.by(sortBy).ascending();
-        model.addAttribute("events", eventService.findAll(PageRequest.of(page, size, sort)));
+        if (search.isEmpty()) {
+            model.addAttribute("events", eventService.findAll(PageRequest.of(page, size, sort)));
+        } else {
+            model.addAttribute("events", eventService.search(search, PageRequest.of(page, size, sort)));
+        }
         model.addAttribute("sortBy", sortBy);
         model.addAttribute("direction", direction);
+        model.addAttribute("search", search);
         return "events/list";
     }
 
