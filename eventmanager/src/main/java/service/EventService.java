@@ -1,5 +1,7 @@
 package com.example.eventmanager.service;
 
+import com.example.eventmanager.client.NotificationServiceClient;
+import com.example.eventmanager.client.UserServiceClient;
 import com.example.eventmanager.exception.ResourceNotFoundException;
 import com.example.eventmanager.exception.BusinessException;
 import com.example.eventmanager.model.Event;
@@ -12,7 +14,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -22,6 +26,8 @@ import java.util.UUID;
 public class EventService {
 
     private final EventRepository eventRepository;
+    private final NotificationServiceClient notificationServiceClient;
+    private final UserServiceClient userServiceClient;
 
     public Page<Event> findAll(Pageable pageable) {
         log.debug("Fetching all events, page: {}", pageable.getPageNumber());
@@ -69,8 +75,29 @@ public class EventService {
         if (event.getJoinToken() == null || event.getJoinToken().isEmpty()) {
             event.setJoinToken(UUID.randomUUID().toString());
         }
+        Event saved = eventRepository.save(event);
         log.info("Saving event: {}", event.getName());
-        return eventRepository.save(event);
+
+        // Trimite notificare la notification-service
+        try {
+            // Obtine token JWT de la user-service
+            Map<String, String> credentials = new HashMap<>();
+            credentials.put("username", "admin");
+            credentials.put("password", "admin123");
+            Map<String, String> authResponse = userServiceClient.authenticate(credentials);
+            String jwtToken = "Bearer " + authResponse.get("token");
+
+            Map<String, Object> notification = new HashMap<>();
+            notification.put("message", "Eveniment nou creat: " + saved.getName());
+            notification.put("eventId", saved.getId());
+            notification.put("type", "EVENT_CREATED");
+            notificationServiceClient.createNotification(1L, "Eveniment nou creat: " + saved.getName(), "INFO", jwtToken);
+            log.info("Notification sent to notification-service for event: {}", saved.getName());
+        } catch (Exception e) {
+            log.warn("Could not send notification to notification-service: {}", e.getMessage());
+        }
+
+        return saved;
     }
 
     @CacheEvict(value = "events", allEntries = true)

@@ -1,1 +1,1961 @@
 2026-06-26 02:03:56 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h21m1s669ms163µs800ns).
+2026-06-26 02:12:43 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-06-26 02:12:43 [main] INFO  c.e.e.EventmanagerApplication - Starting EventmanagerApplication using Java 22.0.1 with PID 19324 (C:\Users\Alex\Desktop\eventmanager\eventmanager\target\classes started by Alex in C:\Users\Alex\Desktop\eventmanager\eventmanager)
+2026-06-26 02:12:43 [main] DEBUG c.e.e.EventmanagerApplication - Running with Spring Boot v4.0.7, Spring v7.0.8
+2026-06-26 02:12:43 [main] INFO  c.e.e.EventmanagerApplication - The following 1 profile is active: "dev"
+2026-06-26 02:12:47 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-06-26 02:12:47 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-26 02:12:47 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 556 ms. Found 8 JPA repository interfaces.
+2026-06-26 02:12:47 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-06-26 02:12:47 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-06-26 02:12:47 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.eventmanager.repository.CategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-06-26 02:12:47 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.eventmanager.repository.EventGroupRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-06-26 02:12:47 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.eventmanager.repository.EventRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-06-26 02:12:47 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.eventmanager.repository.LocationRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-06-26 02:12:47 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.eventmanager.repository.NotificationRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-06-26 02:12:47 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.eventmanager.repository.ParticipantRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-06-26 02:12:47 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.eventmanager.repository.RegistrationRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-06-26 02:12:47 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.eventmanager.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-06-26 02:12:47 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
+2026-06-26 02:12:48 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=aa32a7dc-8976-3372-930f-eafe8e5c30c6
+2026-06-26 02:12:50 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-06-26 02:12:50 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-26 02:12:50 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-26 02:12:50 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-26 02:12:50 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 5971 ms
+2026-06-26 02:12:51 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-26 02:12:51 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-06-26 02:12:53 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-26 02:12:53 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-26 02:12:53 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@469bd719
+2026-06-26 02:12:53 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-26 02:12:54 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5433/eventmanager]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.10
+	Default catalog/schema: eventmanager/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-26 02:12:58 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-26 02:12:58 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-26 02:12:59 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-26 02:13:01 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-26 02:13:02 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-06-26 02:13:02 [main] INFO  o.s.c.o.FeignClientFactoryBean - For 'user-service' URL not provided. Will try picking an instance via load-balancing.
+2026-06-26 02:13:04 [main] INFO  o.s.s.p.JdbcUserDetailsManager - No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2026-06-26 02:13:04 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-06-26 02:13:08 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-06-26 02:13:08 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestClient.
+2026-06-26 02:13:08 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-26 02:13:08 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2026-06-26 02:13:08 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2026-06-26 02:13:08 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-06-26 02:13:08 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-06-26 02:13:08 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-06-26 02:13:08 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-06-26 02:13:08 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2026-06-26 02:13:08 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-06-26 02:13:08 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2026-06-26 02:13:08 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-06-26 02:13:10 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2026-06-26 02:13:10 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2026-06-26 02:13:10 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-26 02:13:10 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1782429190386 with initial instances count: 4
+2026-06-26 02:13:10 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application EVENTMANAGER with eureka with status UP
+2026-06-26 02:13:10 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1782429190414, current=UP, previous=STARTING]
+2026-06-26 02:13:10 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-06-26 02:13:10 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_EVENTMANAGER/localhost:eventmanager:8080: registering service...
+2026-06-26 02:13:10 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-06-26 02:13:10 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8080
+2026-06-26 02:13:10 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_EVENTMANAGER/localhost:eventmanager:8080 - registration status: 204
+2026-06-26 02:13:11 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-06-26 02:13:11 [main] INFO  c.e.e.EventmanagerApplication - Started EventmanagerApplication in 30.653 seconds (process running for 32.75)
+2026-06-26 02:13:13 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-06-26 02:13:13 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-06-26 02:13:13 [main] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        categories c1_0
+2026-06-26 02:13:13 [main] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        locations l1_0
+2026-06-26 02:13:13 [main] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        event_groups eg1_0
+2026-06-26 02:13:13 [main] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        events e1_0
+2026-06-26 02:13:13 [main] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        participants p1_0
+2026-06-26 02:13:16 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-26 02:13:16 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-26 02:13:16 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2026-06-26 02:13:26 [http-nio-8080-exec-6] DEBUG c.e.e.service.EventService - Fetching all events, page: 0
+2026-06-26 02:13:26 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.join_token,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    order by
+        e1_0.start_date 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 02:13:26 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:13:26 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:13:26 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:13:26 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:13:26 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:13:26 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:13:26 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:13:32 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        events e1_0
+2026-06-26 02:13:32 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        participants p1_0
+2026-06-26 02:13:32 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        registrations r1_0
+2026-06-26 02:13:32 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-06-26 02:13:32 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        count(e1_0.id) 
+    from
+        events e1_0 
+    where
+        e1_0.status=?
+2026-06-26 02:13:32 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        count(e1_0.id) 
+    from
+        events e1_0 
+    where
+        e1_0.status=?
+2026-06-26 02:13:32 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        count(e1_0.id) 
+    from
+        events e1_0 
+    where
+        e1_0.status=?
+2026-06-26 02:13:32 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.join_token,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    order by
+        e1_0.start_date desc 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 02:13:32 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:13:32 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:13:32 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:13:32 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:13:32 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:13:32 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:13:32 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:13:32 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        count(e1_0.id) 
+    from
+        events e1_0
+2026-06-26 02:13:32 [http-nio-8080-exec-8] DEBUG c.e.e.service.EventService - Fetching all events from cache
+2026-06-26 02:13:32 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.join_token,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0
+2026-06-26 02:13:32 [http-nio-8080-exec-8] INFO  c.e.e.controller.DashboardController - Events from Redis cache: 5
+2026-06-26 02:13:35 [http-nio-8080-exec-8] INFO  c.e.e.controller.DashboardController - Successfully fetched 3 users from user-service
+2026-06-26 02:18:08 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-06-26 02:19:53 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application EVENTMANAGER with eureka with status DOWN
+2026-06-26 02:19:53 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1782429593935, current=DOWN, previous=UP]
+2026-06-26 02:19:53 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_EVENTMANAGER/localhost:eventmanager:8080: registering service...
+2026-06-26 02:19:54 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_EVENTMANAGER/localhost:eventmanager:8080 - registration status: 204
+2026-06-26 02:19:54 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-26 02:19:54 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-06-26 02:19:54 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-26 02:19:54 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-26 02:19:54 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-26 02:19:54 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2026-06-26 02:19:57 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2026-06-26 02:19:58 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_EVENTMANAGER/localhost:eventmanager:8080 - deregister  status: 200
+2026-06-26 02:19:58 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2026-06-26 02:20:28 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-06-26 02:20:28 [main] INFO  c.e.e.EventmanagerApplication - Starting EventmanagerApplication using Java 22.0.1 with PID 12296 (C:\Users\Alex\Desktop\eventmanager\eventmanager\target\classes started by Alex in C:\Users\Alex\Desktop\eventmanager\eventmanager)
+2026-06-26 02:20:28 [main] DEBUG c.e.e.EventmanagerApplication - Running with Spring Boot v4.0.7, Spring v7.0.8
+2026-06-26 02:20:28 [main] INFO  c.e.e.EventmanagerApplication - The following 1 profile is active: "dev"
+2026-06-26 02:20:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-06-26 02:20:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-26 02:20:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 168 ms. Found 8 JPA repository interfaces.
+2026-06-26 02:20:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-06-26 02:20:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-06-26 02:20:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.eventmanager.repository.CategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-06-26 02:20:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.eventmanager.repository.EventGroupRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-06-26 02:20:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.eventmanager.repository.EventRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-06-26 02:20:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.eventmanager.repository.LocationRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-06-26 02:20:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.eventmanager.repository.NotificationRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-06-26 02:20:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.eventmanager.repository.ParticipantRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-06-26 02:20:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.eventmanager.repository.RegistrationRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-06-26 02:20:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.eventmanager.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-06-26 02:20:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2026-06-26 02:20:30 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=6958ba4b-94ec-3a38-b3f8-07cfedf7aa82
+2026-06-26 02:20:31 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-06-26 02:20:31 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-26 02:20:31 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-26 02:20:31 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-26 02:20:31 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2429 ms
+2026-06-26 02:20:31 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-26 02:20:31 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-06-26 02:20:32 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-26 02:20:32 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-26 02:20:32 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@35e3f3b8
+2026-06-26 02:20:32 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-26 02:20:32 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5433/eventmanager]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.10
+	Default catalog/schema: eventmanager/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-26 02:20:34 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-26 02:20:34 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-26 02:20:34 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-26 02:20:35 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-26 02:20:36 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-06-26 02:20:36 [main] INFO  o.s.c.o.FeignClientFactoryBean - For 'user-service' URL not provided. Will try picking an instance via load-balancing.
+2026-06-26 02:20:36 [main] INFO  o.s.c.o.FeignClientFactoryBean - For 'notification-service' URL not provided. Will try picking an instance via load-balancing.
+2026-06-26 02:20:37 [main] INFO  o.s.s.p.JdbcUserDetailsManager - No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2026-06-26 02:20:37 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-06-26 02:20:38 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-06-26 02:20:39 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestClient.
+2026-06-26 02:20:39 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-26 02:20:39 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2026-06-26 02:20:39 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2026-06-26 02:20:39 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-06-26 02:20:39 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-06-26 02:20:39 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-06-26 02:20:39 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-06-26 02:20:39 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2026-06-26 02:20:39 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-06-26 02:20:39 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2026-06-26 02:20:39 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-06-26 02:20:39 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2026-06-26 02:20:39 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2026-06-26 02:20:39 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-26 02:20:39 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1782429639801 with initial instances count: 4
+2026-06-26 02:20:39 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application EVENTMANAGER with eureka with status UP
+2026-06-26 02:20:39 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1782429639813, current=UP, previous=STARTING]
+2026-06-26 02:20:39 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_EVENTMANAGER/localhost:eventmanager:8080: registering service...
+2026-06-26 02:20:39 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-06-26 02:20:39 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-06-26 02:20:39 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8080
+2026-06-26 02:20:39 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_EVENTMANAGER/localhost:eventmanager:8080 - registration status: 204
+2026-06-26 02:20:40 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-06-26 02:20:40 [main] INFO  c.e.e.EventmanagerApplication - Started EventmanagerApplication in 14.863 seconds (process running for 19.87)
+2026-06-26 02:20:41 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-06-26 02:20:41 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-06-26 02:20:41 [main] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        categories c1_0
+2026-06-26 02:20:41 [main] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        locations l1_0
+2026-06-26 02:20:41 [main] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        event_groups eg1_0
+2026-06-26 02:20:41 [main] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        events e1_0
+2026-06-26 02:20:41 [main] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        participants p1_0
+2026-06-26 02:21:14 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-26 02:21:14 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-26 02:21:14 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2026-06-26 02:21:22 [http-nio-8080-exec-6] DEBUG c.e.e.service.EventService - Fetching all events, page: 0
+2026-06-26 02:21:23 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.join_token,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    order by
+        e1_0.start_date 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 02:21:23 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:21:23 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:21:23 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:21:23 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:21:23 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:21:23 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:21:23 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:21:29 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0
+2026-06-26 02:21:29 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0
+2026-06-26 02:21:29 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0
+2026-06-26 02:21:55 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0
+2026-06-26 02:21:55 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0
+2026-06-26 02:21:55 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0
+2026-06-26 02:22:41 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:22:41 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:22:41 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:22:41 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        events
+        (available_spots, category_id, description, end_date, event_group_id, join_token, location_id, name, start_date, status) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-06-26 02:22:41 [http-nio-8080-exec-2] INFO  c.e.e.service.EventService - Saving event: Startup Summit
+2026-06-26 02:22:45 [http-nio-8080-exec-2] WARN  c.e.e.service.EventService - Could not send notification to notification-service: [401] during [POST] to [http://notification-service/api/notifications] [NotificationServiceClient#createNotification(Map)]: []
+2026-06-26 02:22:45 [http-nio-8080-exec-3] DEBUG c.e.e.service.EventService - Fetching all events, page: 0
+2026-06-26 02:22:45 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.join_token,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    order by
+        e1_0.start_date 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 02:22:45 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:22:45 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:22:45 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:22:45 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:22:45 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:22:45 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:22:45 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:25:39 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-06-26 02:27:57 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application EVENTMANAGER with eureka with status DOWN
+2026-06-26 02:27:57 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1782430077903, current=DOWN, previous=UP]
+2026-06-26 02:27:57 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_EVENTMANAGER/localhost:eventmanager:8080: registering service...
+2026-06-26 02:27:58 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_EVENTMANAGER/localhost:eventmanager:8080 - registration status: 204
+2026-06-26 02:27:58 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-26 02:27:58 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-06-26 02:27:58 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-26 02:27:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-26 02:27:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-26 02:27:58 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2026-06-26 02:28:01 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2026-06-26 02:28:02 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_EVENTMANAGER/localhost:eventmanager:8080 - deregister  status: 200
+2026-06-26 02:28:02 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2026-06-26 02:28:10 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-06-26 02:28:10 [main] INFO  c.e.e.EventmanagerApplication - Starting EventmanagerApplication using Java 22.0.1 with PID 9940 (C:\Users\Alex\Desktop\eventmanager\eventmanager\target\classes started by Alex in C:\Users\Alex\Desktop\eventmanager\eventmanager)
+2026-06-26 02:28:10 [main] DEBUG c.e.e.EventmanagerApplication - Running with Spring Boot v4.0.7, Spring v7.0.8
+2026-06-26 02:28:10 [main] INFO  c.e.e.EventmanagerApplication - The following 1 profile is active: "dev"
+2026-06-26 02:28:11 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-06-26 02:28:11 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-26 02:28:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 174 ms. Found 8 JPA repository interfaces.
+2026-06-26 02:28:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-06-26 02:28:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-06-26 02:28:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.eventmanager.repository.CategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-06-26 02:28:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.eventmanager.repository.EventGroupRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-06-26 02:28:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.eventmanager.repository.EventRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-06-26 02:28:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.eventmanager.repository.LocationRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-06-26 02:28:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.eventmanager.repository.NotificationRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-06-26 02:28:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.eventmanager.repository.ParticipantRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-06-26 02:28:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.eventmanager.repository.RegistrationRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-06-26 02:28:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.eventmanager.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-06-26 02:28:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2026-06-26 02:28:12 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=6958ba4b-94ec-3a38-b3f8-07cfedf7aa82
+2026-06-26 02:28:13 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-06-26 02:28:13 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-26 02:28:13 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-26 02:28:13 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-26 02:28:13 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2235 ms
+2026-06-26 02:28:13 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-26 02:28:13 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-06-26 02:28:14 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-26 02:28:14 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-26 02:28:14 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@76c85485
+2026-06-26 02:28:14 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-26 02:28:14 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5433/eventmanager]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.10
+	Default catalog/schema: eventmanager/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-26 02:28:16 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-26 02:28:16 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-26 02:28:16 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-26 02:28:16 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-26 02:28:17 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-06-26 02:28:17 [main] INFO  o.s.c.o.FeignClientFactoryBean - For 'user-service' URL not provided. Will try picking an instance via load-balancing.
+2026-06-26 02:28:17 [main] INFO  o.s.c.o.FeignClientFactoryBean - For 'notification-service' URL not provided. Will try picking an instance via load-balancing.
+2026-06-26 02:28:18 [main] INFO  o.s.s.p.JdbcUserDetailsManager - No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2026-06-26 02:28:18 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-06-26 02:28:21 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-06-26 02:28:21 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestClient.
+2026-06-26 02:28:21 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-26 02:28:21 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2026-06-26 02:28:21 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2026-06-26 02:28:21 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-06-26 02:28:21 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-06-26 02:28:21 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-06-26 02:28:21 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-06-26 02:28:21 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2026-06-26 02:28:21 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-06-26 02:28:21 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2026-06-26 02:28:21 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-06-26 02:28:22 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2026-06-26 02:28:22 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2026-06-26 02:28:22 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-26 02:28:22 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1782430102037 with initial instances count: 5
+2026-06-26 02:28:22 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application EVENTMANAGER with eureka with status UP
+2026-06-26 02:28:22 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1782430102043, current=UP, previous=STARTING]
+2026-06-26 02:28:22 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_EVENTMANAGER/localhost:eventmanager:8080: registering service...
+2026-06-26 02:28:22 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-06-26 02:28:22 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-06-26 02:28:22 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8080
+2026-06-26 02:28:22 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_EVENTMANAGER/localhost:eventmanager:8080 - registration status: 204
+2026-06-26 02:28:23 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-06-26 02:28:23 [main] INFO  c.e.e.EventmanagerApplication - Started EventmanagerApplication in 14.421 seconds (process running for 15.454)
+2026-06-26 02:28:23 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-06-26 02:28:23 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-06-26 02:28:23 [main] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        categories c1_0
+2026-06-26 02:28:23 [main] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        locations l1_0
+2026-06-26 02:28:23 [main] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        event_groups eg1_0
+2026-06-26 02:28:23 [main] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        events e1_0
+2026-06-26 02:28:23 [main] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        participants p1_0
+2026-06-26 02:28:27 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-26 02:28:27 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-26 02:28:27 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2026-06-26 02:28:37 [http-nio-8080-exec-8] DEBUG c.e.e.service.EventService - Fetching all events, page: 0
+2026-06-26 02:28:37 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.join_token,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    order by
+        e1_0.start_date 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 02:28:37 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:28:37 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:28:37 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:28:37 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:28:37 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:28:37 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:28:37 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:28:44 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0
+2026-06-26 02:28:44 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0
+2026-06-26 02:28:44 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0
+2026-06-26 02:29:34 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:29:34 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:29:34 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:29:34 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        events
+        (available_spots, category_id, description, end_date, event_group_id, join_token, location_id, name, start_date, status) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-06-26 02:29:34 [http-nio-8080-exec-2] INFO  c.e.e.service.EventService - Saving event: Startup Summit
+2026-06-26 02:29:44 [http-nio-8080-exec-2] WARN  c.e.e.service.EventService - Could not send notification to notification-service: [404] during [POST] to [http://notification-service/api/notifications] [NotificationServiceClient#createNotification(Map,String)]: [{"timestamp":"2026-06-25T23:29:43.962Z","status":404,"error":"Not Found","path":"/api/notifications"}]
+2026-06-26 02:29:44 [http-nio-8080-exec-4] DEBUG c.e.e.service.EventService - Fetching all events, page: 0
+2026-06-26 02:29:44 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.join_token,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    order by
+        e1_0.start_date 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 02:29:44 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:29:44 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:29:44 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:29:44 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:29:44 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:29:44 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:29:44 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:29:44 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:29:48 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        events e1_0
+2026-06-26 02:29:48 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        participants p1_0
+2026-06-26 02:29:48 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        registrations r1_0
+2026-06-26 02:29:48 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-06-26 02:29:48 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        count(e1_0.id) 
+    from
+        events e1_0 
+    where
+        e1_0.status=?
+2026-06-26 02:29:48 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        count(e1_0.id) 
+    from
+        events e1_0 
+    where
+        e1_0.status=?
+2026-06-26 02:29:48 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        count(e1_0.id) 
+    from
+        events e1_0 
+    where
+        e1_0.status=?
+2026-06-26 02:29:48 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.join_token,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    order by
+        e1_0.start_date desc 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 02:29:48 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:29:48 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:29:48 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:29:48 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:29:48 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:29:48 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:29:48 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:29:48 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        count(e1_0.id) 
+    from
+        events e1_0
+2026-06-26 02:29:48 [http-nio-8080-exec-5] DEBUG c.e.e.service.EventService - Fetching all events from cache
+2026-06-26 02:29:48 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.join_token,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0
+2026-06-26 02:29:48 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:29:48 [http-nio-8080-exec-5] INFO  c.e.e.controller.DashboardController - Events from Redis cache: 7
+2026-06-26 02:29:48 [http-nio-8080-exec-5] INFO  c.e.e.controller.DashboardController - Successfully fetched 3 users from user-service
+2026-06-26 02:29:57 [http-nio-8080-exec-7] DEBUG c.e.e.service.EventService - Fetching all events, page: 0
+2026-06-26 02:29:57 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.join_token,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    order by
+        e1_0.start_date 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 02:29:57 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:29:57 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:29:57 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:29:57 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:29:57 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:29:57 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:29:57 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:29:57 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:29:59 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.email,
+        p1_0.first_name,
+        p1_0.last_name,
+        p1_0.phone,
+        p1_0.user_id 
+    from
+        participants p1_0 
+    order by
+        p1_0.last_name 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 02:30:02 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0
+2026-06-26 02:30:05 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0
+2026-06-26 02:30:08 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0
+2026-06-26 02:30:12 [http-nio-8080-exec-7] DEBUG c.e.e.service.EventService - Fetching all events, page: 0
+2026-06-26 02:30:12 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.join_token,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    order by
+        e1_0.start_date 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 02:30:12 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:30:12 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:30:12 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:30:12 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:30:12 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:30:12 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:30:12 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:30:12 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:31:59 [http-nio-8080-exec-10] INFO  c.e.e.service.EventService - Deleting event with id: 8
+2026-06-26 02:31:59 [http-nio-8080-exec-10] DEBUG c.e.e.service.EventService - Fetching event with id: 8
+2026-06-26 02:31:59 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        e1_0.description,
+        e1_0.end_date,
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name,
+        e1_0.join_token,
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    left join
+        categories c1_0 
+            on c1_0.id=e1_0.category_id 
+    left join
+        event_groups eg1_0 
+            on eg1_0.id=e1_0.event_group_id 
+    left join
+        locations l1_0 
+            on l1_0.id=e1_0.location_id 
+    where
+        e1_0.id=?
+2026-06-26 02:32:00 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.event_id,
+        r1_0.id,
+        r1_0.participant_id,
+        p1_0.id,
+        p1_0.email,
+        p1_0.first_name,
+        p1_0.last_name,
+        p1_0.phone,
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username,
+        r1_0.registration_date,
+        r1_0.status 
+    from
+        registrations r1_0 
+    left join
+        participants p1_0 
+            on p1_0.id=r1_0.participant_id 
+    left join
+        users u1_0 
+            on u1_0.id=p1_0.user_id 
+    where
+        r1_0.event_id=?
+2026-06-26 02:32:00 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        event_participants 
+    where
+        event_id=?
+2026-06-26 02:32:00 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        events 
+    where
+        id=?
+2026-06-26 02:32:01 [http-nio-8080-exec-1] DEBUG c.e.e.service.EventService - Fetching all events, page: 0
+2026-06-26 02:32:01 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.join_token,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    order by
+        e1_0.start_date 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 02:32:01 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:32:01 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:32:01 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:32:01 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:32:01 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:32:01 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:32:01 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:32:04 [http-nio-8080-exec-4] INFO  c.e.e.service.EventService - Deleting event with id: 7
+2026-06-26 02:32:04 [http-nio-8080-exec-4] DEBUG c.e.e.service.EventService - Fetching event with id: 7
+2026-06-26 02:32:04 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        e1_0.description,
+        e1_0.end_date,
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name,
+        e1_0.join_token,
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    left join
+        categories c1_0 
+            on c1_0.id=e1_0.category_id 
+    left join
+        event_groups eg1_0 
+            on eg1_0.id=e1_0.event_group_id 
+    left join
+        locations l1_0 
+            on l1_0.id=e1_0.location_id 
+    where
+        e1_0.id=?
+2026-06-26 02:32:04 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.event_id,
+        r1_0.id,
+        r1_0.participant_id,
+        p1_0.id,
+        p1_0.email,
+        p1_0.first_name,
+        p1_0.last_name,
+        p1_0.phone,
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username,
+        r1_0.registration_date,
+        r1_0.status 
+    from
+        registrations r1_0 
+    left join
+        participants p1_0 
+            on p1_0.id=r1_0.participant_id 
+    left join
+        users u1_0 
+            on u1_0.id=p1_0.user_id 
+    where
+        r1_0.event_id=?
+2026-06-26 02:32:04 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        event_participants 
+    where
+        event_id=?
+2026-06-26 02:32:04 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        events 
+    where
+        id=?
+2026-06-26 02:32:04 [http-nio-8080-exec-3] DEBUG c.e.e.service.EventService - Fetching all events, page: 0
+2026-06-26 02:32:04 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.join_token,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    order by
+        e1_0.start_date 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 02:32:04 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:32:04 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:32:04 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:32:04 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:32:04 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:32:04 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:32:04 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:33:21 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-06-26 02:35:00 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application EVENTMANAGER with eureka with status DOWN
+2026-06-26 02:35:00 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1782430500677, current=DOWN, previous=UP]
+2026-06-26 02:35:00 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_EVENTMANAGER/localhost:eventmanager:8080: registering service...
+2026-06-26 02:35:00 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_EVENTMANAGER/localhost:eventmanager:8080 - registration status: 204
+2026-06-26 02:35:00 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-26 02:35:00 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-06-26 02:35:01 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-26 02:35:01 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-26 02:35:01 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-26 02:35:01 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2026-06-26 02:35:04 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2026-06-26 02:35:04 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_EVENTMANAGER/localhost:eventmanager:8080 - deregister  status: 200
+2026-06-26 02:35:04 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
