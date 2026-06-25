@@ -6574,3 +6574,18 @@ java.lang.StackOverflowError
 	at com.example.eventmanager.model.Category.toString(Category.java:10)
 	at java.base/java.lang.String.valueOf(String.java:4507)
 	at com.example.eventmanager.model.Event.toString(Event.java:12)
+2026-06-25 21:34:53 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.eventmanager.service.EmailService required a bean of type 'org.springframework.mail.javamail.JavaMailSender' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.mail.javamail.JavaMailSender' in your configuration.
+

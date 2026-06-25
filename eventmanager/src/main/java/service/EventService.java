@@ -6,6 +6,8 @@ import com.example.eventmanager.model.Event;
 import com.example.eventmanager.repository.EventRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -20,6 +22,7 @@ public class EventService {
 
     private final EventRepository eventRepository;
 
+    @Cacheable(value = "events")
     public Page<Event> findAll(Pageable pageable) {
         log.debug("Fetching all events, page: {}", pageable.getPageNumber());
         return eventRepository.findAll(pageable);
@@ -51,6 +54,7 @@ public class EventService {
         return eventRepository.findByNameContainingIgnoreCaseOrDescriptionContainingIgnoreCase(query, query, pageable);
     }
 
+    @CacheEvict(value = "events", allEntries = true)
     public Event save(Event event) {
         if (event.getEndDate().isBefore(event.getStartDate())) {
             log.error("Invalid event dates: startDate={}, endDate={}", event.getStartDate(), event.getEndDate());
@@ -63,6 +67,7 @@ public class EventService {
         return eventRepository.save(event);
     }
 
+    @CacheEvict(value = "events", allEntries = true)
     public Event update(Long id, Event event) {
         Event existing = findById(id);
         existing.setName(event.getName());
@@ -78,6 +83,7 @@ public class EventService {
         return eventRepository.save(existing);
     }
 
+    @CacheEvict(value = "events", allEntries = true)
     public void delete(Long id) {
         log.info("Deleting event with id: {}", id);
         findById(id);
