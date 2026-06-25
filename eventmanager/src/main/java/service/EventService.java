@@ -10,6 +10,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+import java.util.UUID;
+
 @Slf4j
 @Service
 @RequiredArgsConstructor
@@ -39,10 +42,17 @@ public class EventService {
                 });
     }
 
+    public Optional<Event> findByJoinToken(String token) {
+        return eventRepository.findByJoinToken(token);
+    }
+
     public Event save(Event event) {
         if (event.getEndDate().isBefore(event.getStartDate())) {
             log.error("Invalid event dates: startDate={}, endDate={}", event.getStartDate(), event.getEndDate());
             throw new BusinessException("Data de final nu poate fi înainte de data de start");
+        }
+        if (event.getJoinToken() == null || event.getJoinToken().isEmpty()) {
+            event.setJoinToken(UUID.randomUUID().toString());
         }
         log.info("Saving event: {}", event.getName());
         return eventRepository.save(event);

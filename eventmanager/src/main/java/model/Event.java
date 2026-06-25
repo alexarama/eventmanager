@@ -43,6 +43,9 @@ public class Event {
     @Column(nullable = false)
     private EventStatus status = EventStatus.OPEN;
 
+    @Column(unique = true)
+    private String joinToken;
+
     @ManyToOne
     @JoinColumn(name = "location_id")
     private Location location;

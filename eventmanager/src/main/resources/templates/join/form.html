@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/base}">
+<head>
+    <title>Înregistrare eveniment</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <div class="card mx-auto" style="max-width: 500px;">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0"><i class="bi bi-calendar-check"></i> Înregistrare la eveniment</h4>
+        </div>
+        <div class="card-body">
+            <div class="alert alert-info mb-3">
+                <strong>Eveniment:</strong> <span th:text="${event.name}"></span><br>
+                <strong>Data:</strong> <span th:text="${#temporals.format(event.startDate, 'dd.MM.yyyy HH:mm')}"></span><br>
+                <strong>Locuri disponibile:</strong> <span th:text="${event.availableSpots}"></span>
+            </div>
+
+            <form th:action="@{/join/{token}(token=${event.joinToken})}"
+                  th:object="${participant}" method="post">
+
+                <div class="mb-3">
+                    <label class="form-label">Prenume *</label>
+                    <input type="text" class="form-control" th:field="*{firstName}"
+                           th:classappend="${#fields.hasErrors('firstName')} ? 'is-invalid'"/>
+                    <div class="invalid-feedback" th:errors="*{firstName}"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Nume *</label>
+                    <input type="text" class="form-control" th:field="*{lastName}"
+                           th:classappend="${#fields.hasErrors('lastName')} ? 'is-invalid'"/>
+                    <div class="invalid-feedback" th:errors="*{lastName}"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Email *</label>
+                    <input type="email" class="form-control" th:field="*{email}"
+                           th:classappend="${#fields.hasErrors('email')} ? 'is-invalid'"/>
+                    <div class="invalid-feedback" th:errors="*{email}"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Telefon</label>
+                    <input type="text" class="form-control" th:field="*{phone}"/>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">
+                    <i class="bi bi-person-check"></i> Înregistrează-mă
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

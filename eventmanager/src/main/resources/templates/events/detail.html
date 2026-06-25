@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
       layout:decorate="~{layout/base}">
 <head>
     <title>Detalii eveniment</title>
@@ -10,7 +11,8 @@
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2 th:text="${event.name}"></h2>
         <div>
-            <a th:href="@{/events/{id}/edit(id=${event.id})}" class="btn btn-warning">
+            <a th:href="@{/events/{id}/edit(id=${event.id})}" class="btn btn-warning"
+               sec:authorize="hasRole('ADMIN')">
                 <i class="bi bi-pencil"></i> Editează
             </a>
             <a href="/events" class="btn btn-secondary">Înapoi</a>
@@ -36,39 +38,58 @@
         </div>
     </div>
 
-    <h4>Înregistrare la eveniment</h4>
-    <form th:action="@{/registrations/event/{eventId}/participant/{participantId}(eventId=${event.id}, participantId=1)}"
-          method="post" class="mt-3 mb-3" id="registrationForm">
-        <div class="mb-3">
-            <label class="form-label">ID Participant *</label>
-            <input type="number" class="form-control" id="participantId" name="participantId"
-                   min="1" required placeholder="Introdu ID-ul participantului"/>
-            <div class="invalid-feedback">ID-ul participantului este obligatoriu</div>
-        </div>
-        <button type="submit" class="btn btn-success">
-            <i class="bi bi-person-plus"></i> Înregistrează
-        </button>
-    </form>
+    <div class="alert alert-warning mb-3" sec:authorize="hasRole('ADMIN')">
+        <strong><i class="bi bi-key"></i> Token de înregistrare:</strong>
+        <code th:text="${event.joinToken}"></code>
+        <br>
+        <small>Trimite acest link participanților:
+            <a th:href="@{/join/{token}(token=${event.joinToken})}"
+               th:text="${'http://localhost:8080/join/' + event.joinToken}"></a>
+        </small>
+    </div>
 
-    <a th:href="@{/registrations/event/{id}(id=${event.id})}" class="btn btn-info mb-3">
-        <i class="bi bi-people"></i> Vezi înregistrări
-    </a>
+    <div sec:authorize="hasRole('ADMIN')">
+        <h4>Înregistrare la eveniment</h4>
+        <form th:action="@{/registrations/event/{eventId}/participant/{participantId}(eventId=${event.id}, participantId=0)}"
+              method="post" class="mt-3 mb-3" id="registrationForm">
+            <div class="mb-3">
+                <label class="form-label">Participant *</label>
+                <select class="form-select" id="participantSelect" required>
+                    <option value="">-- Selectează participant --</option>
+                    <option th:each="participant : ${participants}"
+                            th:value="${participant.id}"
+                            th:text="${participant.lastName + ' ' + participant.firstName + ' (' + participant.email + ')'}">
+                    </option>
+                </select>
+                <div class="invalid-feedback">Selectează un participant</div>
+            </div>
+            <button type="submit" class="btn btn-success">
+                <i class="bi bi-person-plus"></i> Înregistrează
+            </button>
+        </form>
+
+        <a th:href="@{/registrations/event/{id}(id=${event.id})}" class="btn btn-info mb-3">
+            <i class="bi bi-people"></i> Vezi înregistrări
+        </a>
+    </div>
 
     <script>
         (function() {
             'use strict';
             const form = document.getElementById('registrationForm');
-            form.addEventListener('submit', function(event) {
-                const participantId = document.getElementById('participantId');
-                if (!participantId.value || participantId.value < 1) {
-                    participantId.classList.add('is-invalid');
-                    event.preventDefault();
-                    event.stopPropagation();
-                } else {
-                    const action = form.action.replace('/participant/1', '/participant/' + participantId.value);
-                    form.action = action;
-                }
-            });
+            if (form) {
+                form.addEventListener('submit', function(event) {
+                    const select = document.getElementById('participantSelect');
+                    if (!select.value) {
+                        select.classList.add('is-invalid');
+                        event.preventDefault();
+                        event.stopPropagation();
+                    } else {
+                        const action = form.action.replace('/participant/0', '/participant/' + select.value);
+                        form.action = action;
+                    }
+                });
+            }
         })();
     </script>
 </div>

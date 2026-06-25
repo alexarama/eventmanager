@@ -17,10 +17,10 @@
         </a>
         <div class="navbar-nav ms-auto">
             <a class="nav-link" href="/events">Evenimente</a>
-            <a class="nav-link" href="/participants">Participanți</a>
-            <a class="nav-link" href="/locations">Locații</a>
-            <a class="nav-link" href="/categories">Categorii</a>
-            <a class="nav-link" href="/event-groups">Grupuri</a>
+            <a class="nav-link" href="/participants" sec:authorize="hasRole('ADMIN')">Participanți</a>
+            <a class="nav-link" href="/locations" sec:authorize="hasRole('ADMIN')">Locații</a>
+            <a class="nav-link" href="/categories" sec:authorize="hasRole('ADMIN')">Categorii</a>
+            <a class="nav-link" href="/event-groups" sec:authorize="hasRole('ADMIN')">Grupuri</a>
             <form th:action="@{/logout}" method="post" class="d-inline">
                 <button type="submit" class="btn btn-outline-light btn-sm ms-2">Logout</button>
             </form>

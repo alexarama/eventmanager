@@ -5,6 +5,7 @@ import com.example.eventmanager.service.CategoryService;
 import com.example.eventmanager.service.EventGroupService;
 import com.example.eventmanager.service.EventService;
 import com.example.eventmanager.service.LocationService;
+import com.example.eventmanager.service.ParticipantService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
@@ -23,6 +24,7 @@ public class EventController {
     private final LocationService locationService;
     private final CategoryService categoryService;
     private final EventGroupService eventGroupService;
+    private final ParticipantService participantService;
 
     @GetMapping
     public String findAll(Model model,
@@ -40,6 +42,7 @@ public class EventController {
     @GetMapping("/{id}")
     public String findById(@PathVariable Long id, Model model) {
         model.addAttribute("event", eventService.findById(id));
+        model.addAttribute("participants", participantService.findAll(PageRequest.of(0, 1000, Sort.by("lastName").ascending())).getContent());
         return "events/detail";
     }
 

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
       layout:decorate="~{layout/base}">
 <head>
     <title>Evenimente</title>
@@ -9,7 +10,8 @@
 <div layout:fragment="content">
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2>Evenimente</h2>
-        <a href="/events/new" class="btn btn-primary">
+        <a href="/events/new" class="btn btn-primary"
+           sec:authorize="hasRole('ADMIN')">
             <i class="bi bi-plus"></i> Adaugă eveniment
         </a>
     </div>
@@ -38,10 +40,10 @@
             <td th:text="${event.name}"></td>
             <td th:text="${#temporals.format(event.startDate, 'dd.MM.yyyy HH:mm')}"></td>
             <td>
-                    <span th:text="${event.status}"
-                          th:classappend="${event.status.name() == 'OPEN'} ? 'badge bg-success' :
-                                         (${event.status.name() == 'CLOSED'} ? 'badge bg-danger' : 'badge bg-warning')">
-                    </span>
+                <span th:text="${event.status}"
+                      th:classappend="${event.status.name() == 'OPEN'} ? 'badge bg-success' :
+                                     (${event.status.name() == 'CLOSED'} ? 'badge bg-danger' : 'badge bg-warning')">
+                </span>
             </td>
             <td th:text="${event.availableSpots}"></td>
             <td th:text="${event.category?.name}"></td>
@@ -49,10 +51,12 @@
                 <a th:href="@{/events/{id}(id=${event.id})}" class="btn btn-sm btn-info">
                     <i class="bi bi-eye"></i>
                 </a>
-                <a th:href="@{/events/{id}/edit(id=${event.id})}" class="btn btn-sm btn-warning">
+                <a th:href="@{/events/{id}/edit(id=${event.id})}" class="btn btn-sm btn-warning"
+                   sec:authorize="hasRole('ADMIN')">
                     <i class="bi bi-pencil"></i>
                 </a>
-                <form th:action="@{/events/{id}/delete(id=${event.id})}" method="post" class="d-inline">
+                <form th:action="@{/events/{id}/delete(id=${event.id})}" method="post" class="d-inline"
+                      sec:authorize="hasRole('ADMIN')">
                     <button type="submit" class="btn btn-sm btn-danger"
                             onclick="return confirm('Ești sigur?')">
                         <i class="bi bi-trash"></i>
