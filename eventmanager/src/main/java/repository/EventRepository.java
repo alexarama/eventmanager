@@ -15,4 +15,5 @@ public interface EventRepository extends JpaRepository<Event, Long> {
     Page<Event> findByEventGroupId(Long eventGroupId, Pageable pageable);
     Optional<Event> findByJoinToken(String joinToken);
     Page<Event> findByNameContainingIgnoreCaseOrDescriptionContainingIgnoreCase(String name, String description, Pageable pageable);
+    long countByStatus(Event.EventStatus status);
 }
