@@ -12,6 +12,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -22,10 +23,15 @@ public class EventService {
 
     private final EventRepository eventRepository;
 
-    @Cacheable(value = "events")
     public Page<Event> findAll(Pageable pageable) {
         log.debug("Fetching all events, page: {}", pageable.getPageNumber());
         return eventRepository.findAll(pageable);
+    }
+
+    @Cacheable(value = "events")
+    public List<Event> findAllCached() {
+        log.debug("Fetching all events from cache");
+        return eventRepository.findAll();
     }
 
     public Page<Event> findByStatus(Event.EventStatus status, Pageable pageable) {
