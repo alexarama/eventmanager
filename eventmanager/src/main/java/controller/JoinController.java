@@ -1,7 +1,7 @@
 package com.example.eventmanager.controller;
 
-import com.example.eventmanager.model.Event;
 import com.example.eventmanager.model.Participant;
+import com.example.eventmanager.service.EmailService;
 import com.example.eventmanager.service.EventService;
 import com.example.eventmanager.service.ParticipantService;
 import com.example.eventmanager.service.RegistrationService;
@@ -21,6 +21,7 @@ public class JoinController {
     private final EventService eventService;
     private final ParticipantService participantService;
     private final RegistrationService registrationService;
+    private final EmailService emailService;
 
     @GetMapping("/{token}")
     public String showJoinForm(@PathVariable String token, Model model) {
@@ -49,6 +50,15 @@ public class JoinController {
 
                     Participant saved = participantService.save(participant);
                     registrationService.save(event.getId(), saved.getId());
+
+                    String eventDate = event.getStartDate().toString();
+                    String location = event.getLocation() != null ? event.getLocation().getName() : "TBD";
+                    emailService.sendRegistrationConfirmation(
+                            saved.getEmail(),
+                            event.getName(),
+                            eventDate,
+                            location
+                    );
 
                     redirectAttributes.addFlashAttribute("success",
                             "Te-ai înregistrat cu succes la evenimentul: " + event.getName());
