@@ -120,21 +120,19 @@ erDiagram
 
 ## Arhitectură
 
-[Browser] → [Monolith :8080] ←→ [User Service :8081]
+```
+[Browser] ──→ [Monolith :8080] ──→ [User Service :8081]
+                    │
+                    └──→ [Notification Service :8083]
 
-←→ [Notification Service :8083]
-
-[API Gateway :8085] → [Event Service :8082/:8084]
-
-→ [User Service :8081]
-
-→ [Notification Service :8083]
+[API Gateway :8085] ──→ [Event Service :8082/:8084]
+                    ──→ [User Service :8081]  
+                    ──→ [Notification Service :8083]
 
 [Eureka Server :8761] ← toate serviciile se înregistrează
-
 [Config Server :8888] ← toate serviciile fetch configurații
-
-[Redis :6379] ← caching evenimente
+[Redis :6379]         ← caching evenimente
+```
 
 ### Servicii
 - **eventmanager** (port 8080) — monolith cu UI Thymeleaf, integrat cu microservicii
