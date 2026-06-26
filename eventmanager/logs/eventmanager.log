@@ -2421,3 +2421,1887 @@
         locations l1_0 
     where
         l1_0.id=?
+2026-06-26 02:50:47 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        events e1_0
+2026-06-26 02:50:47 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        participants p1_0
+2026-06-26 02:50:47 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        registrations r1_0
+2026-06-26 02:50:47 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-06-26 02:50:47 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        count(e1_0.id) 
+    from
+        events e1_0 
+    where
+        e1_0.status=?
+2026-06-26 02:50:47 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        count(e1_0.id) 
+    from
+        events e1_0 
+    where
+        e1_0.status=?
+2026-06-26 02:50:47 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        count(e1_0.id) 
+    from
+        events e1_0 
+    where
+        e1_0.status=?
+2026-06-26 02:50:47 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.join_token,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    order by
+        e1_0.start_date desc 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 02:50:47 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:50:47 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:50:47 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:50:47 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:50:47 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:50:47 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:50:47 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:50:47 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        count(e1_0.id) 
+    from
+        events e1_0
+2026-06-26 02:50:47 [http-nio-8080-exec-2] DEBUG c.e.e.service.EventService - Fetching all events from cache
+2026-06-26 02:50:47 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.join_token,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0
+2026-06-26 02:50:47 [http-nio-8080-exec-2] INFO  c.e.e.controller.DashboardController - Events from Redis cache: 6
+2026-06-26 02:50:48 [http-nio-8080-exec-2] INFO  c.e.e.controller.DashboardController - Successfully fetched 3 users from user-service
+2026-06-26 02:51:25 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-06-26 02:51:32 [http-nio-8080-exec-8] DEBUG c.e.e.service.EventService - Fetching all events, page: 0
+2026-06-26 02:51:32 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.join_token,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    order by
+        e1_0.start_date 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 02:51:32 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:51:32 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:51:32 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:51:32 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:51:32 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:51:32 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:51:32 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:51:36 [http-nio-8080-exec-10] INFO  c.e.e.service.EventService - Deleting event with id: 9
+2026-06-26 02:51:36 [http-nio-8080-exec-10] DEBUG c.e.e.service.EventService - Fetching event with id: 9
+2026-06-26 02:51:36 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        e1_0.description,
+        e1_0.end_date,
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name,
+        e1_0.join_token,
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    left join
+        categories c1_0 
+            on c1_0.id=e1_0.category_id 
+    left join
+        event_groups eg1_0 
+            on eg1_0.id=e1_0.event_group_id 
+    left join
+        locations l1_0 
+            on l1_0.id=e1_0.location_id 
+    where
+        e1_0.id=?
+2026-06-26 02:51:36 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.event_id,
+        r1_0.id,
+        r1_0.participant_id,
+        p1_0.id,
+        p1_0.email,
+        p1_0.first_name,
+        p1_0.last_name,
+        p1_0.phone,
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username,
+        r1_0.registration_date,
+        r1_0.status 
+    from
+        registrations r1_0 
+    left join
+        participants p1_0 
+            on p1_0.id=r1_0.participant_id 
+    left join
+        users u1_0 
+            on u1_0.id=p1_0.user_id 
+    where
+        r1_0.event_id=?
+2026-06-26 02:51:36 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        event_participants 
+    where
+        event_id=?
+2026-06-26 02:51:36 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        events 
+    where
+        id=?
+2026-06-26 02:51:36 [http-nio-8080-exec-6] DEBUG c.e.e.service.EventService - Fetching all events, page: 0
+2026-06-26 02:51:36 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.join_token,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    order by
+        e1_0.start_date 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 02:51:36 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:51:36 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:51:36 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:51:36 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:51:36 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:51:36 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:51:36 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:51:42 [http-nio-8080-exec-3] DEBUG c.e.e.service.EventService - Fetching event with id: 3
+2026-06-26 02:51:42 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        e1_0.description,
+        e1_0.end_date,
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name,
+        e1_0.join_token,
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    left join
+        categories c1_0 
+            on c1_0.id=e1_0.category_id 
+    left join
+        event_groups eg1_0 
+            on eg1_0.id=e1_0.event_group_id 
+    left join
+        locations l1_0 
+            on l1_0.id=e1_0.location_id 
+    where
+        e1_0.id=?
+2026-06-26 02:51:42 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.email,
+        p1_0.first_name,
+        p1_0.last_name,
+        p1_0.phone,
+        p1_0.user_id 
+    from
+        participants p1_0 
+    order by
+        p1_0.last_name 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 02:51:55 [http-nio-8080-exec-5] DEBUG c.e.e.service.EventService - Fetching event with id: 3
+2026-06-26 02:51:55 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        e1_0.description,
+        e1_0.end_date,
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name,
+        e1_0.join_token,
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    left join
+        categories c1_0 
+            on c1_0.id=e1_0.category_id 
+    left join
+        event_groups eg1_0 
+            on eg1_0.id=e1_0.event_group_id 
+    left join
+        locations l1_0 
+            on l1_0.id=e1_0.location_id 
+    where
+        e1_0.id=?
+2026-06-26 02:51:55 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0
+2026-06-26 02:51:55 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0
+2026-06-26 02:51:55 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0
+2026-06-26 02:51:55 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.event_group_id,
+        e1_0.id,
+        e1_0.available_spots,
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.join_token,
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    left join
+        categories c1_0 
+            on c1_0.id=e1_0.category_id 
+    left join
+        locations l1_0 
+            on l1_0.id=e1_0.location_id 
+    where
+        e1_0.event_group_id=?
+2026-06-26 02:52:00 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:52:00 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:52:00 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:52:00 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0
+2026-06-26 02:52:00 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0
+2026-06-26 02:52:00 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0
+2026-06-26 02:52:00 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.event_group_id,
+        e1_0.id,
+        e1_0.available_spots,
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.join_token,
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    left join
+        categories c1_0 
+            on c1_0.id=e1_0.category_id 
+    left join
+        locations l1_0 
+            on l1_0.id=e1_0.location_id 
+    where
+        e1_0.event_group_id=?
+2026-06-26 02:52:21 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:52:21 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:52:21 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:52:21 [http-nio-8080-exec-9] DEBUG c.e.e.service.EventService - Fetching event with id: 3
+2026-06-26 02:52:21 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        e1_0.description,
+        e1_0.end_date,
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name,
+        e1_0.join_token,
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    left join
+        categories c1_0 
+            on c1_0.id=e1_0.category_id 
+    left join
+        event_groups eg1_0 
+            on eg1_0.id=e1_0.event_group_id 
+    left join
+        locations l1_0 
+            on l1_0.id=e1_0.location_id 
+    where
+        e1_0.id=?
+2026-06-26 02:52:21 [http-nio-8080-exec-9] INFO  c.e.e.service.EventService - Updating event with id: 3
+2026-06-26 02:52:21 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    update
+        events 
+    set
+        available_spots=?,
+        category_id=?,
+        description=?,
+        end_date=?,
+        event_group_id=?,
+        join_token=?,
+        location_id=?,
+        name=?,
+        start_date=?,
+        status=? 
+    where
+        id=?
+2026-06-26 02:52:21 [http-nio-8080-exec-10] DEBUG c.e.e.service.EventService - Fetching all events, page: 0
+2026-06-26 02:52:21 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.join_token,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    order by
+        e1_0.start_date 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 02:52:21 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:52:21 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:52:21 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:52:21 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:52:21 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:52:21 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:52:21 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:52:25 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        events e1_0
+2026-06-26 02:52:25 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        participants p1_0
+2026-06-26 02:52:25 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        registrations r1_0
+2026-06-26 02:52:25 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-06-26 02:52:25 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        count(e1_0.id) 
+    from
+        events e1_0 
+    where
+        e1_0.status=?
+2026-06-26 02:52:25 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        count(e1_0.id) 
+    from
+        events e1_0 
+    where
+        e1_0.status=?
+2026-06-26 02:52:25 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        count(e1_0.id) 
+    from
+        events e1_0 
+    where
+        e1_0.status=?
+2026-06-26 02:52:25 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.join_token,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    order by
+        e1_0.start_date desc 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 02:52:25 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:52:25 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:52:25 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:52:25 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 02:52:25 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 02:52:25 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:52:25 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 02:52:25 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        count(e1_0.id) 
+    from
+        events e1_0
+2026-06-26 02:52:25 [http-nio-8080-exec-1] DEBUG c.e.e.service.EventService - Fetching all events from cache
+2026-06-26 02:52:25 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.join_token,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0
+2026-06-26 02:52:25 [http-nio-8080-exec-1] INFO  c.e.e.controller.DashboardController - Events from Redis cache: 5
+2026-06-26 02:52:25 [http-nio-8080-exec-1] INFO  c.e.e.controller.DashboardController - Successfully fetched 3 users from user-service
+2026-06-26 02:56:37 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-06-26 03:01:37 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-06-26 03:02:01 [http-nio-8080-exec-2] DEBUG c.e.e.service.EventService - Fetching all events, page: 0
+2026-06-26 03:02:01 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.join_token,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    order by
+        e1_0.start_date 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 03:02:01 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 03:02:01 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 03:02:01 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 03:02:01 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 03:02:01 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 03:02:01 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 03:02:01 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 03:02:05 [http-nio-8080-exec-8] DEBUG c.e.e.service.EventService - Fetching event with id: 4
+2026-06-26 03:02:05 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        e1_0.description,
+        e1_0.end_date,
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name,
+        e1_0.join_token,
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    left join
+        categories c1_0 
+            on c1_0.id=e1_0.category_id 
+    left join
+        event_groups eg1_0 
+            on eg1_0.id=e1_0.event_group_id 
+    left join
+        locations l1_0 
+            on l1_0.id=e1_0.location_id 
+    where
+        e1_0.id=?
+2026-06-26 03:02:05 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.email,
+        p1_0.first_name,
+        p1_0.last_name,
+        p1_0.phone,
+        p1_0.user_id 
+    from
+        participants p1_0 
+    order by
+        p1_0.last_name 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 03:05:09 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0
+2026-06-26 03:05:10 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.email,
+        p1_0.first_name,
+        p1_0.last_name,
+        p1_0.phone,
+        p1_0.user_id 
+    from
+        participants p1_0 
+    order by
+        p1_0.last_name 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 03:05:15 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.email,
+        p1_0.first_name,
+        p1_0.last_name,
+        p1_0.phone,
+        p1_0.user_id 
+    from
+        participants p1_0 
+    order by
+        p1_0.last_name 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 03:05:18 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.email,
+        p1_0.first_name,
+        p1_0.last_name,
+        p1_0.phone,
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        participants p1_0 
+    left join
+        users u1_0 
+            on u1_0.id=p1_0.user_id 
+    where
+        p1_0.id=?
+2026-06-26 03:05:19 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.email,
+        p1_0.first_name,
+        p1_0.last_name,
+        p1_0.phone,
+        p1_0.user_id 
+    from
+        participants p1_0 
+    order by
+        p1_0.last_name 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 03:05:22 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0
+2026-06-26 03:05:23 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0
+2026-06-26 03:05:24 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0
+2026-06-26 03:05:25 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        events e1_0
+2026-06-26 03:05:25 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        participants p1_0
+2026-06-26 03:05:25 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        registrations r1_0
+2026-06-26 03:05:25 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-06-26 03:05:25 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        count(e1_0.id) 
+    from
+        events e1_0 
+    where
+        e1_0.status=?
+2026-06-26 03:05:25 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        count(e1_0.id) 
+    from
+        events e1_0 
+    where
+        e1_0.status=?
+2026-06-26 03:05:25 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        count(e1_0.id) 
+    from
+        events e1_0 
+    where
+        e1_0.status=?
+2026-06-26 03:05:25 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.join_token,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    order by
+        e1_0.start_date desc 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 03:05:25 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 03:05:25 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 03:05:25 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 03:05:25 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 03:05:25 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 03:05:25 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 03:05:25 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 03:05:25 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        count(e1_0.id) 
+    from
+        events e1_0
+2026-06-26 03:05:25 [http-nio-8080-exec-9] INFO  c.e.e.controller.DashboardController - Events from Redis cache: 5
+2026-06-26 03:05:25 [http-nio-8080-exec-9] INFO  c.e.e.controller.DashboardController - Successfully fetched 3 users from user-service
+2026-06-26 03:05:26 [http-nio-8080-exec-6] DEBUG c.e.e.service.EventService - Fetching all events, page: 0
+2026-06-26 03:05:26 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.join_token,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    order by
+        e1_0.start_date 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 03:05:26 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 03:05:26 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 03:05:26 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 03:05:26 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 03:05:26 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 03:05:26 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 03:05:26 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 03:05:29 [http-nio-8080-exec-3] DEBUG c.e.e.service.EventService - Fetching event with id: 2
+2026-06-26 03:05:29 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        e1_0.description,
+        e1_0.end_date,
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name,
+        e1_0.join_token,
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    left join
+        categories c1_0 
+            on c1_0.id=e1_0.category_id 
+    left join
+        event_groups eg1_0 
+            on eg1_0.id=e1_0.event_group_id 
+    left join
+        locations l1_0 
+            on l1_0.id=e1_0.location_id 
+    where
+        e1_0.id=?
+2026-06-26 03:05:29 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0
+2026-06-26 03:05:29 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0
+2026-06-26 03:05:29 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0
+2026-06-26 03:05:29 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.event_group_id,
+        e1_0.id,
+        e1_0.available_spots,
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.join_token,
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    left join
+        categories c1_0 
+            on c1_0.id=e1_0.category_id 
+    left join
+        locations l1_0 
+            on l1_0.id=e1_0.location_id 
+    where
+        e1_0.event_group_id=?
+2026-06-26 03:05:33 [http-nio-8080-exec-5] DEBUG c.e.e.service.EventService - Fetching all events, page: 0
+2026-06-26 03:05:33 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.join_token,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    order by
+        e1_0.start_date 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 03:05:33 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 03:05:33 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 03:05:33 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 03:05:33 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 03:05:33 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 03:05:33 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 03:05:33 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 03:05:36 [http-nio-8080-exec-7] DEBUG c.e.e.service.EventService - Fetching event with id: 4
+2026-06-26 03:05:36 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        e1_0.description,
+        e1_0.end_date,
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name,
+        e1_0.join_token,
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    left join
+        categories c1_0 
+            on c1_0.id=e1_0.category_id 
+    left join
+        event_groups eg1_0 
+            on eg1_0.id=e1_0.event_group_id 
+    left join
+        locations l1_0 
+            on l1_0.id=e1_0.location_id 
+    where
+        e1_0.id=?
+2026-06-26 03:05:36 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0
+2026-06-26 03:05:36 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0
+2026-06-26 03:05:36 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0
+2026-06-26 03:05:36 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.event_group_id,
+        e1_0.id,
+        e1_0.available_spots,
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.join_token,
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    left join
+        categories c1_0 
+            on c1_0.id=e1_0.category_id 
+    left join
+        locations l1_0 
+            on l1_0.id=e1_0.location_id 
+    where
+        e1_0.event_group_id=?
+2026-06-26 03:05:38 [http-nio-8080-exec-9] DEBUG c.e.e.service.EventService - Fetching all events, page: 0
+2026-06-26 03:05:38 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.join_token,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    order by
+        e1_0.start_date 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 03:05:38 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 03:05:38 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 03:05:38 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 03:05:38 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0 
+    where
+        c1_0.id=?
+2026-06-26 03:05:38 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0 
+    where
+        eg1_0.id=?
+2026-06-26 03:05:38 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 03:05:38 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0 
+    where
+        l1_0.id=?
+2026-06-26 03:05:39 [http-nio-8080-exec-6] DEBUG c.e.e.service.EventService - Fetching event with id: 4
+2026-06-26 03:05:39 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        e1_0.description,
+        e1_0.end_date,
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name,
+        e1_0.join_token,
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    left join
+        categories c1_0 
+            on c1_0.id=e1_0.category_id 
+    left join
+        event_groups eg1_0 
+            on eg1_0.id=e1_0.event_group_id 
+    left join
+        locations l1_0 
+            on l1_0.id=e1_0.location_id 
+    where
+        e1_0.id=?
+2026-06-26 03:05:39 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.email,
+        p1_0.first_name,
+        p1_0.last_name,
+        p1_0.phone,
+        p1_0.user_id 
+    from
+        participants p1_0 
+    order by
+        p1_0.last_name 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-26 03:06:37 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
