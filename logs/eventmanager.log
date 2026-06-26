@@ -1,21 +1,21 @@
-2026-06-22 21:42:11 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
-2026-06-22 21:42:11 [main] INFO  c.e.e.EventmanagerApplication - Starting EventmanagerApplication using Java 22.0.1 with PID 1788 (C:\Users\Alex\Desktop\eventmanager\eventmanager\target\classes started by Alex in C:\Users\Alex\Desktop\eventmanager)
-2026-06-22 21:42:11 [main] DEBUG c.e.e.EventmanagerApplication - Running with Spring Boot v4.0.7, Spring v7.0.8
-2026-06-22 21:42:11 [main] INFO  c.e.e.EventmanagerApplication - The following 1 profile is active: "dev"
-2026-06-22 21:42:11 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-22 21:42:11 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 42 ms. Found 8 JPA repository interfaces.
-2026-06-22 21:42:12 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2026-06-22 21:42:12 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2026-06-22 21:42:12 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-06-22 21:42:12 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
-2026-06-22 21:42:12 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 977 ms
-2026-06-22 21:42:12 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-06-22 21:42:12 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.19.Final
-2026-06-22 21:42:12 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-22 21:42:12 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-06-22 21:42:12 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5444f1c3
-2026-06-22 21:42:12 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-06-22 21:42:12 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2026-06-24 01:18:16 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-06-24 01:18:16 [main] INFO  c.e.e.EventmanagerApplication - Starting EventmanagerApplication using Java 22.0.1 with PID 18252 (C:\Users\Alex\Desktop\eventmanager\eventmanager\target\classes started by Alex in C:\Users\Alex\Desktop\eventmanager)
+2026-06-24 01:18:16 [main] DEBUG c.e.e.EventmanagerApplication - Running with Spring Boot v4.0.7, Spring v7.0.8
+2026-06-24 01:18:16 [main] INFO  c.e.e.EventmanagerApplication - The following 1 profile is active: "dev"
+2026-06-24 01:18:16 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-24 01:18:16 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 41 ms. Found 8 JPA repository interfaces.
+2026-06-24 01:18:17 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-06-24 01:18:17 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-24 01:18:17 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-24 01:18:17 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-24 01:18:17 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 903 ms
+2026-06-24 01:18:17 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-24 01:18:17 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-06-24 01:18:17 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-24 01:18:17 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-24 01:18:17 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1cfd6f63
+2026-06-24 01:18:17 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-24 01:18:18 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [jdbc:postgresql://localhost:5433/eventmanager]
 	Database driver: PostgreSQL JDBC Driver
 	Database dialect: PostgreSQLDialect
@@ -27,15 +27,85 @@
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-06-22 21:42:13 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-22 21:42:13 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-22 21:42:13 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-06-22 21:42:14 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-22 21:42:14 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
-2026-06-22 21:42:14 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2026-06-22 21:42:14 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2026-06-22 21:42:14 [main] INFO  c.e.e.EventmanagerApplication - Started EventmanagerApplication in 4.197 seconds (process running for 4.69)
-2026-06-22 21:42:14 [main] DEBUG org.hibernate.SQL - 
+2026-06-24 01:18:18 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-24 01:18:18 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists notifications 
+       add constraint FKg6j96trq2q0lv1qyykf8tj5j7 
+       foreign key (participant_id) 
+       references participants
+2026-06-24 01:18:18 [main] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table if exists notifications 
+       add constraint FKg6j96trq2q0lv1qyykf8tj5j7 
+       foreign key (participant_id) 
+       references participants" via JDBC [ERROR: insert or update on table "notifications" violates foreign key constraint "fkg6j96trq2q0lv1qyykf8tj5j7"
+  Detail: Key (participant_id)=(3) is not present in table "participants".]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table if exists notifications 
+       add constraint FKg6j96trq2q0lv1qyykf8tj5j7 
+       foreign key (participant_id) 
+       references participants" via JDBC [ERROR: insert or update on table "notifications" violates foreign key constraint "fkg6j96trq2q0lv1qyykf8tj5j7"
+  Detail: Key (participant_id)=(3) is not present in table "participants".]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:81)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:566)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:506)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applyForeignKeys(AbstractSchemaMigrator.java:438)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:256)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:96)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:269)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:323)
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:437)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1456)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.example.eventmanager.EventmanagerApplication.main(EventmanagerApplication.java:10)
+Caused by: org.postgresql.util.PSQLException: ERROR: insert or update on table "notifications" violates foreign key constraint "fkg6j96trq2q0lv1qyykf8tj5j7"
+  Detail: Key (participant_id)=(3) is not present in table "participants".
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2904)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2589)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:431)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:534)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:437)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:359)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:344)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:320)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:315)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:76)
+	... 37 common frames omitted
+2026-06-24 01:18:18 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-24 01:18:19 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-24 01:18:19 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-24 01:18:19 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-06-24 01:18:19 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-06-24 01:18:19 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-06-24 01:18:19 [main] INFO  c.e.e.EventmanagerApplication - Started EventmanagerApplication in 4.036 seconds (process running for 4.405)
+2026-06-24 01:18:20 [main] DEBUG org.hibernate.SQL - 
     select
         u1_0.id,
         u1_0.enabled,
@@ -46,7 +116,7 @@
         users u1_0 
     where
         u1_0.username=?
-2026-06-22 21:42:14 [main] DEBUG org.hibernate.SQL - 
+2026-06-24 01:18:20 [main] DEBUG org.hibernate.SQL - 
     select
         u1_0.id,
         u1_0.enabled,
@@ -57,6 +127,914 @@
         users u1_0 
     where
         u1_0.username=?
-2026-06-22 21:43:03 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-06-22 21:43:03 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2026-06-22 21:43:03 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-06-24 01:18:53 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-24 01:18:53 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-24 01:18:53 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-06-24 01:27:47 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-24 01:27:47 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-06-24 01:27:47 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-24 01:27:47 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-24 01:27:47 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-24 01:27:50 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-06-24 01:27:50 [main] INFO  c.e.e.EventmanagerApplication - Starting EventmanagerApplication using Java 22.0.1 with PID 15784 (C:\Users\Alex\Desktop\eventmanager\eventmanager\target\classes started by Alex in C:\Users\Alex\Desktop\eventmanager)
+2026-06-24 01:27:50 [main] DEBUG c.e.e.EventmanagerApplication - Running with Spring Boot v4.0.7, Spring v7.0.8
+2026-06-24 01:27:50 [main] INFO  c.e.e.EventmanagerApplication - The following 1 profile is active: "dev"
+2026-06-24 01:27:51 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-24 01:27:51 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 8 JPA repository interfaces.
+2026-06-24 01:27:51 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-06-24 01:27:51 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-24 01:27:51 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-24 01:27:51 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-24 01:27:51 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1154 ms
+2026-06-24 01:27:51 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-24 01:27:51 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-06-24 01:27:52 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-24 01:27:52 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-24 01:27:52 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5444f1c3
+2026-06-24 01:27:52 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-24 01:27:52 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5433/eventmanager]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.10
+	Default catalog/schema: eventmanager/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-24 01:27:54 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-24 01:27:54 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists notifications 
+       add constraint FKg6j96trq2q0lv1qyykf8tj5j7 
+       foreign key (participant_id) 
+       references participants
+2026-06-24 01:27:54 [main] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table if exists notifications 
+       add constraint FKg6j96trq2q0lv1qyykf8tj5j7 
+       foreign key (participant_id) 
+       references participants" via JDBC [ERROR: insert or update on table "notifications" violates foreign key constraint "fkg6j96trq2q0lv1qyykf8tj5j7"
+  Detail: Key (participant_id)=(3) is not present in table "participants".]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table if exists notifications 
+       add constraint FKg6j96trq2q0lv1qyykf8tj5j7 
+       foreign key (participant_id) 
+       references participants" via JDBC [ERROR: insert or update on table "notifications" violates foreign key constraint "fkg6j96trq2q0lv1qyykf8tj5j7"
+  Detail: Key (participant_id)=(3) is not present in table "participants".]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:81)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:566)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:506)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applyForeignKeys(AbstractSchemaMigrator.java:438)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:256)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:96)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:269)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:323)
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:437)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1456)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.example.eventmanager.EventmanagerApplication.main(EventmanagerApplication.java:10)
+Caused by: org.postgresql.util.PSQLException: ERROR: insert or update on table "notifications" violates foreign key constraint "fkg6j96trq2q0lv1qyykf8tj5j7"
+  Detail: Key (participant_id)=(3) is not present in table "participants".
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2904)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2589)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:431)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:534)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:437)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:359)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:344)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:320)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:315)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:76)
+	... 37 common frames omitted
+2026-06-24 01:27:54 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-24 01:27:54 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-24 01:27:54 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-24 01:27:54 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-06-24 01:27:55 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-06-24 01:27:55 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-06-24 01:27:55 [main] INFO  c.e.e.EventmanagerApplication - Started EventmanagerApplication in 5.636 seconds (process running for 6.135)
+2026-06-24 01:27:55 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-06-24 01:27:55 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-06-24 01:28:04 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-24 01:28:04 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-24 01:28:05 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 20 ms
+2026-06-24 01:28:35 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-06-24 01:28:35 [http-nio-8080-exec-6] DEBUG c.e.e.service.EventService - Fetching all events, page: 0
+2026-06-24 01:28:35 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    order by
+        e1_0.start_date 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-24 01:29:12 [http-nio-8080-exec-8] DEBUG c.e.e.service.EventService - Fetching event with id: 1
+2026-06-24 01:29:12 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        e1_0.description,
+        e1_0.end_date,
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name,
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    left join
+        categories c1_0 
+            on c1_0.id=e1_0.category_id 
+    left join
+        event_groups eg1_0 
+            on eg1_0.id=e1_0.event_group_id 
+    left join
+        locations l1_0 
+            on l1_0.id=e1_0.location_id 
+    where
+        e1_0.id=?
+2026-06-24 01:32:17 [http-nio-8080-exec-1] DEBUG c.e.e.service.EventService - Fetching all events, page: 0
+2026-06-24 01:32:17 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    order by
+        e1_0.start_date 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-24 01:32:25 [http-nio-8080-exec-2] DEBUG c.e.e.service.EventService - Fetching event with id: 1
+2026-06-24 01:32:25 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        e1_0.description,
+        e1_0.end_date,
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name,
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    left join
+        categories c1_0 
+            on c1_0.id=e1_0.category_id 
+    left join
+        event_groups eg1_0 
+            on eg1_0.id=e1_0.event_group_id 
+    left join
+        locations l1_0 
+            on l1_0.id=e1_0.location_id 
+    where
+        e1_0.id=?
+2026-06-24 01:32:25 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name 
+    from
+        locations l1_0
+2026-06-24 01:32:25 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.name 
+    from
+        categories c1_0
+2026-06-24 01:32:25 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name 
+    from
+        event_groups eg1_0
+2026-06-24 01:32:29 [http-nio-8080-exec-5] DEBUG c.e.e.service.EventService - Fetching all events, page: 0
+2026-06-24 01:32:29 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    order by
+        e1_0.start_date 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-24 01:35:46 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-24 01:35:46 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-06-24 01:35:46 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-24 01:35:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-24 01:35:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-24 01:35:50 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-06-24 01:35:50 [main] INFO  c.e.e.EventmanagerApplication - Starting EventmanagerApplication using Java 22.0.1 with PID 20144 (C:\Users\Alex\Desktop\eventmanager\eventmanager\target\classes started by Alex in C:\Users\Alex\Desktop\eventmanager)
+2026-06-24 01:35:50 [main] DEBUG c.e.e.EventmanagerApplication - Running with Spring Boot v4.0.7, Spring v7.0.8
+2026-06-24 01:35:50 [main] INFO  c.e.e.EventmanagerApplication - The following 1 profile is active: "dev"
+2026-06-24 01:35:51 [main] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'userDetailsService' defined in class path resource [com/example/eventmanager/config/UserDetailsServiceConfig.class]: Cannot register bean definition [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=userDetailsServiceConfig; factoryMethodName=userDetailsService; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/example/eventmanager/config/UserDetailsServiceConfig.class]] for bean 'userDetailsService' since there is already [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=securityConfig; factoryMethodName=userDetailsService; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/example/eventmanager/config/SecurityConfig.class]] bound.
+2026-06-24 01:35:51 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-24 01:35:51 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'userDetailsService', defined in class path resource [com/example/eventmanager/config/UserDetailsServiceConfig.class], could not be registered. A bean with that name has already been defined in class path resource [com/example/eventmanager/config/SecurityConfig.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2026-06-24 01:38:32 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-06-24 01:38:32 [main] INFO  c.e.e.EventmanagerApplication - Starting EventmanagerApplication using Java 22.0.1 with PID 26976 (C:\Users\Alex\Desktop\eventmanager\eventmanager\target\classes started by Alex in C:\Users\Alex\Desktop\eventmanager)
+2026-06-24 01:38:32 [main] DEBUG c.e.e.EventmanagerApplication - Running with Spring Boot v4.0.7, Spring v7.0.8
+2026-06-24 01:38:32 [main] INFO  c.e.e.EventmanagerApplication - The following 1 profile is active: "dev"
+2026-06-24 01:38:32 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-24 01:38:32 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 45 ms. Found 8 JPA repository interfaces.
+2026-06-24 01:38:33 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-06-24 01:38:33 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-24 01:38:33 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-24 01:38:33 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-24 01:38:33 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1050 ms
+2026-06-24 01:38:33 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-24 01:38:33 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-06-24 01:38:34 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-24 01:38:34 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-24 01:38:34 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2553dcc0
+2026-06-24 01:38:34 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-24 01:38:34 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5433/eventmanager]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.10
+	Default catalog/schema: eventmanager/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-24 01:38:35 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-24 01:38:35 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists notifications 
+       add constraint FKg6j96trq2q0lv1qyykf8tj5j7 
+       foreign key (participant_id) 
+       references participants
+2026-06-24 01:38:35 [main] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table if exists notifications 
+       add constraint FKg6j96trq2q0lv1qyykf8tj5j7 
+       foreign key (participant_id) 
+       references participants" via JDBC [ERROR: insert or update on table "notifications" violates foreign key constraint "fkg6j96trq2q0lv1qyykf8tj5j7"
+  Detail: Key (participant_id)=(3) is not present in table "participants".]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table if exists notifications 
+       add constraint FKg6j96trq2q0lv1qyykf8tj5j7 
+       foreign key (participant_id) 
+       references participants" via JDBC [ERROR: insert or update on table "notifications" violates foreign key constraint "fkg6j96trq2q0lv1qyykf8tj5j7"
+  Detail: Key (participant_id)=(3) is not present in table "participants".]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:81)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:566)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:506)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applyForeignKeys(AbstractSchemaMigrator.java:438)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:256)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:96)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:269)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:323)
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:437)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1456)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.example.eventmanager.EventmanagerApplication.main(EventmanagerApplication.java:10)
+Caused by: org.postgresql.util.PSQLException: ERROR: insert or update on table "notifications" violates foreign key constraint "fkg6j96trq2q0lv1qyykf8tj5j7"
+  Detail: Key (participant_id)=(3) is not present in table "participants".
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2904)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2589)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:431)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:534)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:437)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:359)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:344)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:320)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:315)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:76)
+	... 37 common frames omitted
+2026-06-24 01:38:35 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-24 01:38:35 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-24 01:38:35 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-24 01:38:35 [main] INFO  o.s.s.p.JdbcUserDetailsManager - No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2026-06-24 01:38:35 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-06-24 01:38:36 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-06-24 01:38:36 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-06-24 01:38:36 [main] INFO  c.e.e.EventmanagerApplication - Started EventmanagerApplication in 4.671 seconds (process running for 5.171)
+2026-06-24 01:38:36 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-06-24 01:38:36 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-06-24 01:39:18 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-24 01:39:18 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-24 01:39:18 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 23 ms
+2026-06-24 01:39:30 [http-nio-8080-exec-5] DEBUG c.e.e.service.EventService - Fetching all events, page: 0
+2026-06-24 01:39:30 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    order by
+        e1_0.start_date 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-24 01:39:54 [http-nio-8080-exec-8] DEBUG c.e.e.service.EventService - Fetching event with id: 1
+2026-06-24 01:39:54 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        c1_0.id,
+        c1_0.description,
+        c1_0.name,
+        e1_0.description,
+        e1_0.end_date,
+        eg1_0.id,
+        eg1_0.description,
+        eg1_0.name,
+        l1_0.id,
+        l1_0.address,
+        l1_0.capacity,
+        l1_0.city,
+        l1_0.country,
+        l1_0.name,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    left join
+        categories c1_0 
+            on c1_0.id=e1_0.category_id 
+    left join
+        event_groups eg1_0 
+            on eg1_0.id=e1_0.event_group_id 
+    left join
+        locations l1_0 
+            on l1_0.id=e1_0.location_id 
+    where
+        e1_0.id=?
+2026-06-24 02:46:36 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m30s694ms988µs400ns).
+2026-06-24 03:49:33 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45m56s528ms458µs200ns).
+2026-06-24 18:26:47 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14h37m16s148ms761µs900ns).
+2026-06-24 18:45:46 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m58s703ms221µs600ns).
+2026-06-24 20:13:38 [http-nio-8080-exec-3] DEBUG c.e.e.service.EventService - Fetching all events, page: 0
+2026-06-24 20:13:38 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    order by
+        e1_0.start_date 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-24 20:19:41 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-24 20:19:41 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-06-24 20:19:41 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-24 20:19:41 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-24 20:19:41 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-24 20:19:48 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-06-24 20:19:48 [main] INFO  c.e.e.EventmanagerApplication - Starting EventmanagerApplication using Java 22.0.1 with PID 30440 (C:\Users\Alex\Desktop\eventmanager\eventmanager\target\classes started by Alex in C:\Users\Alex\Desktop\eventmanager)
+2026-06-24 20:19:48 [main] DEBUG c.e.e.EventmanagerApplication - Running with Spring Boot v4.0.7, Spring v7.0.8
+2026-06-24 20:19:48 [main] INFO  c.e.e.EventmanagerApplication - The following 1 profile is active: "dev"
+2026-06-24 20:19:49 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-24 20:19:49 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 56 ms. Found 8 JPA repository interfaces.
+2026-06-24 20:19:49 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-06-24 20:19:49 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-24 20:19:49 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-24 20:19:49 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-24 20:19:49 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1306 ms
+2026-06-24 20:19:50 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-24 20:19:50 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-06-24 20:19:50 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-24 20:19:50 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-24 20:19:50 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@ae74eef
+2026-06-24 20:19:50 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-24 20:19:50 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5433/eventmanager]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.10
+	Default catalog/schema: eventmanager/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-24 20:19:51 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-24 20:19:51 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists notifications 
+       add constraint FKg6j96trq2q0lv1qyykf8tj5j7 
+       foreign key (participant_id) 
+       references participants
+2026-06-24 20:19:51 [main] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table if exists notifications 
+       add constraint FKg6j96trq2q0lv1qyykf8tj5j7 
+       foreign key (participant_id) 
+       references participants" via JDBC [ERROR: insert or update on table "notifications" violates foreign key constraint "fkg6j96trq2q0lv1qyykf8tj5j7"
+  Detail: Key (participant_id)=(3) is not present in table "participants".]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table if exists notifications 
+       add constraint FKg6j96trq2q0lv1qyykf8tj5j7 
+       foreign key (participant_id) 
+       references participants" via JDBC [ERROR: insert or update on table "notifications" violates foreign key constraint "fkg6j96trq2q0lv1qyykf8tj5j7"
+  Detail: Key (participant_id)=(3) is not present in table "participants".]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:81)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:566)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:506)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applyForeignKeys(AbstractSchemaMigrator.java:438)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:256)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:96)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:269)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:323)
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:437)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1456)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.example.eventmanager.EventmanagerApplication.main(EventmanagerApplication.java:10)
+Caused by: org.postgresql.util.PSQLException: ERROR: insert or update on table "notifications" violates foreign key constraint "fkg6j96trq2q0lv1qyykf8tj5j7"
+  Detail: Key (participant_id)=(3) is not present in table "participants".
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2904)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2589)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:431)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:534)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:437)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:359)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:344)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:320)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:315)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:76)
+	... 37 common frames omitted
+2026-06-24 20:19:51 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-24 20:19:51 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-24 20:19:52 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-24 20:19:52 [main] INFO  o.s.s.p.JdbcUserDetailsManager - No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2026-06-24 20:19:52 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-06-24 20:19:52 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-06-24 20:19:52 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-06-24 20:19:52 [main] INFO  c.e.e.EventmanagerApplication - Started EventmanagerApplication in 4.903 seconds (process running for 5.71)
+2026-06-24 20:19:53 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-06-24 20:19:53 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-06-24 20:19:53 [main] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        categories c1_0
+2026-06-24 20:19:53 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        categories
+        (description, name) 
+    values
+        (?, ?)
+2026-06-24 20:19:53 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        categories
+        (description, name) 
+    values
+        (?, ?)
+2026-06-24 20:19:53 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        categories
+        (description, name) 
+    values
+        (?, ?)
+2026-06-24 20:19:53 [main] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        locations l1_0
+2026-06-24 20:19:53 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        locations
+        (address, capacity, city, country, name) 
+    values
+        (?, ?, ?, ?, ?)
+2026-06-24 20:19:53 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        locations
+        (address, capacity, city, country, name) 
+    values
+        (?, ?, ?, ?, ?)
+2026-06-24 20:19:53 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        locations
+        (address, capacity, city, country, name) 
+    values
+        (?, ?, ?, ?, ?)
+2026-06-24 20:19:53 [main] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        event_groups eg1_0
+2026-06-24 20:19:53 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        event_groups
+        (description, name) 
+    values
+        (?, ?)
+2026-06-24 20:19:53 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        event_groups
+        (description, name) 
+    values
+        (?, ?)
+2026-06-24 20:19:53 [main] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        events e1_0
+2026-06-24 20:19:53 [main] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        participants p1_0
+2026-06-24 20:19:53 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        participants
+        (email, first_name, last_name, phone, user_id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-06-24 20:19:53 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        participants
+        (email, first_name, last_name, phone, user_id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-06-24 20:19:53 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        participants
+        (email, first_name, last_name, phone, user_id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-06-24 20:20:30 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-24 20:20:30 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-24 20:20:30 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 53 ms
+2026-06-24 20:20:48 [http-nio-8080-exec-8] DEBUG c.e.e.service.EventService - Fetching all events, page: 0
+2026-06-24 20:20:48 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.available_spots,
+        e1_0.category_id,
+        e1_0.description,
+        e1_0.end_date,
+        e1_0.event_group_id,
+        e1_0.location_id,
+        e1_0.name,
+        e1_0.start_date,
+        e1_0.status 
+    from
+        events e1_0 
+    order by
+        e1_0.start_date 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-06-24 20:58:52 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m31s328ms858µs800ns).
+2026-06-24 21:05:42 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-24 21:05:42 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-06-24 21:05:42 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-24 21:05:42 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-24 21:05:42 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-24 21:05:49 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-06-24 21:05:49 [main] INFO  c.e.e.EventmanagerApplication - Starting EventmanagerApplication using Java 22.0.1 with PID 31612 (C:\Users\Alex\Desktop\eventmanager\eventmanager\target\classes started by Alex in C:\Users\Alex\Desktop\eventmanager)
+2026-06-24 21:05:49 [main] DEBUG c.e.e.EventmanagerApplication - Running with Spring Boot v4.0.7, Spring v7.0.8
+2026-06-24 21:05:49 [main] INFO  c.e.e.EventmanagerApplication - The following 1 profile is active: "dev"
+2026-06-24 21:05:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-24 21:05:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 8 JPA repository interfaces.
+2026-06-24 21:05:51 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-06-24 21:05:51 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-24 21:05:51 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-24 21:05:51 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-24 21:05:51 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1057 ms
+2026-06-24 21:05:51 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-24 21:05:51 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-06-24 21:05:51 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-24 21:05:51 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-24 21:05:52 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@ae74eef
+2026-06-24 21:05:52 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-24 21:05:52 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5433/eventmanager]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.10
+	Default catalog/schema: eventmanager/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-24 21:05:53 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-24 21:05:53 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists notifications 
+       add constraint FKg6j96trq2q0lv1qyykf8tj5j7 
+       foreign key (participant_id) 
+       references participants
+2026-06-24 21:05:53 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-24 21:05:53 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-24 21:05:53 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-24 21:05:54 [main] INFO  o.s.s.p.JdbcUserDetailsManager - No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2026-06-24 21:05:54 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-06-24 21:05:54 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-06-24 21:05:54 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-06-24 21:05:54 [main] INFO  c.e.e.EventmanagerApplication - Started EventmanagerApplication in 5.18 seconds (process running for 9.305)
+2026-06-24 21:05:54 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-06-24 21:05:54 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-06-24 21:05:54 [main] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        categories c1_0
+2026-06-24 21:05:54 [main] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        locations l1_0
+2026-06-24 21:05:54 [main] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        event_groups eg1_0
+2026-06-24 21:05:54 [main] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        events e1_0
+2026-06-24 21:05:54 [main] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        participants p1_0
+2026-06-24 21:06:52 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-24 21:06:52 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-06-24 21:06:52 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-24 21:06:52 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-24 21:06:52 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

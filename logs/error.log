@@ -1,0 +1,14 @@
+2026-06-24 01:35:51 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'userDetailsService', defined in class path resource [com/example/eventmanager/config/UserDetailsServiceConfig.class], could not be registered. A bean with that name has already been defined in class path resource [com/example/eventmanager/config/SecurityConfig.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
