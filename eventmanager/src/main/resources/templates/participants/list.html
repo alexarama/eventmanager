@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
       layout:decorate="~{layout/base}">
 <head>
     <title>Participanți</title>
@@ -9,7 +10,7 @@
 <div layout:fragment="content">
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2>Participanți</h2>
-        <a href="/participants/new" class="btn btn-primary">
+        <a href="/participants/new" class="btn btn-primary" sec:authorize="hasRole('ADMIN')">
             <i class="bi bi-plus"></i> Adaugă participant
         </a>
     </div>
@@ -42,10 +43,12 @@
                 <a th:href="@{/participants/{id}(id=${participant.id})}" class="btn btn-sm btn-info">
                     <i class="bi bi-eye"></i>
                 </a>
-                <a th:href="@{/participants/{id}/edit(id=${participant.id})}" class="btn btn-sm btn-warning">
+                <a th:href="@{/participants/{id}/edit(id=${participant.id})}" class="btn btn-sm btn-warning"
+                   sec:authorize="hasRole('ADMIN')">
                     <i class="bi bi-pencil"></i>
                 </a>
-                <form th:action="@{/participants/{id}/delete(id=${participant.id})}" method="post" class="d-inline">
+                <form th:action="@{/participants/{id}/delete(id=${participant.id})}" method="post" class="d-inline"
+                      sec:authorize="hasRole('ADMIN')">
                     <button type="submit" class="btn btn-sm btn-danger"
                             onclick="return confirm('Ești sigur?')">
                         <i class="bi bi-trash"></i>

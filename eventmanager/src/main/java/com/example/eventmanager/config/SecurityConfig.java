@@ -38,8 +38,13 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/login", "/css/**", "/js/**").permitAll()
-                        .requestMatchers("/participants/**", "/notifications/**").hasAnyRole("USER", "ADMIN")
-                        .requestMatchers("/events/new", "/events/*/edit", "/events/*/delete").hasRole("ADMIN")
+                        .requestMatchers("/join/**").permitAll()
+                        .requestMatchers("/dashboard/**").hasRole("ADMIN")
+                        .requestMatchers("/participants/**").hasRole("ADMIN")
+                        .requestMatchers("/notifications/**").hasRole("ADMIN")
+                        .requestMatchers("/registrations/*/delete").hasRole("ADMIN")
+                        .requestMatchers("/registrations/**").hasAnyRole("USER", "ADMIN")
+                        .requestMatchers("/events/new", "/events/*/edit", "/events/*/delete", "/events/*/export").hasRole("ADMIN")
                         .requestMatchers("/categories/**", "/locations/**", "/event-groups/**").hasRole("ADMIN")
                         .anyRequest().authenticated()
                 )

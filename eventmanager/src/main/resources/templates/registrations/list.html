@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
       layout:decorate="~{layout/base}">
 <head>
     <title>Înregistrări</title>
@@ -27,7 +28,7 @@
                     Status
                 </a>
             </th>
-            <th>Acțiuni</th>
+            <th sec:authorize="hasRole('ADMIN')">Acțiuni</th>
         </tr>
         </thead>
         <tbody>
@@ -36,7 +37,7 @@
             <td th:text="${registration.event.name}"></td>
             <td th:text="${#temporals.format(registration.registrationDate, 'dd.MM.yyyy HH:mm')}"></td>
             <td th:text="${registration.status}"></td>
-            <td>
+            <td sec:authorize="hasRole('ADMIN')">
                 <form th:action="@{/registrations/{id}/delete(id=${registration.id})}" method="post" class="d-inline">
                     <button type="submit" class="btn btn-sm btn-danger"
                             onclick="return confirm('Ești sigur?')">

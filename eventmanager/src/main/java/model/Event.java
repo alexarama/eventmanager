@@ -8,8 +8,10 @@ import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import java.time.LocalDateTime;
 import java.util.List;
+import lombok.ToString;
 
 @Data
+@ToString(exclude = {"category", "location", "eventGroup", "participants", "registrations"})
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
@@ -40,6 +42,9 @@ public class Event {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private EventStatus status = EventStatus.OPEN;
+
+    @Column(unique = true)
+    private String joinToken;
 
     @ManyToOne
     @JoinColumn(name = "location_id")

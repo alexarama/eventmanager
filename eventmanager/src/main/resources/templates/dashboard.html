@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/base}">
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <h2 class="mb-4"><i class="bi bi-speedometer2"></i> Dashboard</h2>
+
+    <div class="alert alert-success mb-4">
+        <i class="bi bi-database-check"></i>
+        <strong>Redis Cache:</strong>
+        <span th:text="${cachedEventsCount}"></span> evenimente în cache Redis
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card text-white bg-primary">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-calendar-event"></i> Evenimente</h5>
+                    <h2 th:text="${totalEvents}"></h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-success">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-people"></i> Participanți</h5>
+                    <h2 th:text="${totalParticipants}"></h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-info">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-clipboard-check"></i> Înregistrări</h5>
+                    <h2 th:text="${totalRegistrations}"></h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-warning">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-person"></i> Utilizatori</h5>
+                    <h2 th:text="${totalUsers}"></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card border-success">
+                <div class="card-body text-center">
+                    <h5 class="text-success"><i class="bi bi-check-circle"></i> Evenimente OPEN</h5>
+                    <h2 th:text="${openEvents}"></h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-danger">
+                <div class="card-body text-center">
+                    <h5 class="text-danger"><i class="bi bi-x-circle"></i> Evenimente CLOSED</h5>
+                    <h2 th:text="${closedEvents}"></h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-warning">
+                <div class="card-body text-center">
+                    <h5 class="text-warning"><i class="bi bi-slash-circle"></i> Evenimente CANCELLED</h5>
+                    <h2 th:text="${cancelledEvents}"></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h5><i class="bi bi-clock-history"></i> Evenimente recente</h5>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Nume</th>
+                    <th>Data start</th>
+                    <th>Status</th>
+                    <th>Locuri disponibile</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="event : ${recentEvents}">
+                    <td>
+                        <a th:href="@{/events/{id}(id=${event.id})}" th:text="${event.name}"></a>
+                    </td>
+                    <td th:text="${#temporals.format(event.startDate, 'dd.MM.yyyy HH:mm')}"></td>
+                    <td>
+                        <span th:text="${event.status}"
+                              th:classappend="${event.status.name() == 'OPEN'} ? 'badge bg-success' :
+                                             (${event.status.name() == 'CLOSED'} ? 'badge bg-danger' : 'badge bg-warning')">
+                        </span>
+                    </td>
+                    <td th:text="${event.availableSpots}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="card mt-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h5><i class="bi bi-people"></i> Utilizatori din User Service</h5>
+            <span th:if="${microserviceConnected}" class="badge bg-success">Conectat</span>
+            <span th:unless="${microserviceConnected}" class="badge bg-danger">Deconectat</span>
+        </div>
+        <div class="card-body">
+            <div th:if="${microserviceConnected}">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>Rol</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="user : ${microserviceUsers}">
+                        <td th:text="${user.id}"></td>
+                        <td th:text="${user.username}"></td>
+                        <td th:text="${user.role}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div th:unless="${microserviceConnected}" class="alert alert-warning">
+                User Service nu este disponibil momentan.
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
